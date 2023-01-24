@@ -3,9 +3,59 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
-import instagramLogo from '../../public/insta.svg'
-import whatsappLogo from '../../public/whats.png'
+import gmailIcon from '../../public/gmail.svg'
+import phoneIcon from '../../public/phone.svg'
+import { Gallery } from "react-grid-gallery";
+
 const inter = Inter({ subsets: ['latin'] })
+const images = [
+  {
+    src: "/parede.jpg",
+    width: 200,
+    height: 212,
+  },
+  {
+     src: "/banheiro.jpg",
+     width: 1000,
+     height: 1000,
+     /*tags: [
+      { value: "Cimento Queimado", title: "Cimento Queimado  " },
+      { value: "Banheiro", title: "Banheiro" },
+   ],*/
+     //isSelected: true,
+     //caption: "After Rain (Jeshu John - designerspics.com)",
+  },
+  {
+    src: "/cozinha-geladeira.jpg",
+    width: 200,
+    height: 212,
+  },
+  {
+     src: "/cozinha.jpg",
+     width: 200,
+     height: 212,
+  },
+  {
+    src: "/sala-de-estar.jpg",
+    width: 200,
+    height: 212,
+ },
+ {
+  src: "/living.jpg",
+  width: 200,
+  height: 212,
+},
+{
+  src: "/banheiro-escuro.jpg",
+  width: 200,
+  height: 212,
+},
+{
+  src: "/area.jpg",
+  width: 200,
+  height: 212,
+},
+];
 
 export default function Home() {
   //bg-[#a9a9a954]
@@ -34,35 +84,91 @@ export default function Home() {
       <div id='antes-e-depois' className='bg-white md:flex'>
         <div className='self-center max-w-4xl p-8 md:px-24'>
           <h2 className='text-4xl font-bold'>TRANSFORME O SEU AMBIENTE</h2>
-          <p className='mt-4 text-2xl font-light'>O efeito cimento queimado transforma um ambiente sem graca em um lugar <b>aconchegante e moderno.</b></p>
+          <p className='mt-4 text-2xl font-light'>O efeito cimento queimado transforma um ambiente sem graça em um lugar <b>aconchegante e moderno.</b></p>
           <p className='mt-4 text-2xl'><b>Arraste a foto</b> e veja o antes e o depois de um dos nossos projetos.</p>
+          <div className='mt-12'>
+            <button 
+              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
+              className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
+            >
+                SOLICITAR ORÇAMENTO GRATUITO
+            </button>
+          </div>
         </div>
         <div className='self-center mx-2 rounded-md'>
           {<ReactCompareSlider
+            position={43}
             className='md:max-w-[35vw] mx-2 my-20 rounded-lg'
             itemOne={<ReactCompareSliderImage src="/antes.png" alt="Image one" />}
             itemTwo={<ReactCompareSliderImage src="/depois.png" alt="Image two" />}
           />}
         </div>
       </div>
-      <div className='pt-8 text-center bg-black'>
-        <h2 className='text-4xl font-bold text-white'>Contato</h2>
+      <div className='text-center bg-white'>
+        <h3 className='my-12 text-4xl font-bold text-black'>
+          SONHOS JÁ REALIZADOS
+        </h3>
+      <Gallery images={images} rowHeight={400} />
+        <div className='my-12'>
+          <button
+            onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
+            className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
+          >
+            QUERO REALIZAR O MEU SONHO
+          </button>
+        </div>
       </div>
-      <div className='flex justify-center p-8 bg-black'>
-        <Image onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} 
-          src={instagramLogo} 
-          width={65} 
-          height={65} 
-          alt='' 
-          className='mx-2 hover:cursor-pointer' 
-        />
-        <Image onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')} 
-          src={whatsappLogo}
-          width={65} 
-          height={65} 
-          alt='' 
-          className='mx-2 hover:cursor-pointer'
-        />
+      <div className='flex pt-8 text-center bg-black'>
+        <div className='flex flex-col justify-center w-full md:flex-row'>
+          <div className='flex flex-col items-center self-center'>
+            <p className='text-2xl font-bold text-white'>FRG PINTURAS</p>
+            {/*<Image src='/logo.jpg' alt='' width={70} height={70} className='ml-4 transition-all border-2 border-black hover:cursor-pointer rounded-full !opacity-1 hover:scale-110' onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} />*/}
+            {<p className='mx-4 text-white'>CNPJ 45.634.926/0001-77</p>}
+          </div>
+          <div>
+            {/*<h2 className='text-4xl font-bold text-white'>Fale conosco</h2>*/}
+            <div className='flex justify-center py-8 bg-black'>
+              <Image onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')}
+                src='/insta-black.svg'
+                width={70}
+                height={70}
+                alt=''
+                className='mx-4 hover:cursor-pointer'
+              />
+              <Image onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
+                src='/whats-black.svg'
+                width={70}
+                height={70}
+                alt=''
+                className='mx-4 hover:cursor-pointer'
+              />
+            </div>
+          </div>
+        </div>
+        {/*<div className='flex justify-center mt-2'>
+          <a href="mailto:frgpinturas@gmail.com">
+            <Image
+              src={gmailIcon}
+              width={28}
+              height={28}
+              alt=''
+              className='mx-4 hover:cursor-pointer'
+            />
+          </a>
+          <p className='text-xl text-white'>frgpinturas@gmail.com</p>
+        </div>*/}
+        {/*<div className='flex justify-center mt-2'>
+          <a href="tel:123-456-7890">
+          <Image
+              src={phoneIcon}
+              width={28}
+              height={28}
+              alt=''
+              className='mx-4 hover:cursor-pointer'
+            />
+          </a>
+          <p className='text-xl text-white'>(51) 991549280</p>
+        </div>*/}
       </div>
     </div>
   )
