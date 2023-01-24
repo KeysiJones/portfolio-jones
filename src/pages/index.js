@@ -6,6 +6,7 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import gmailIcon from '../../public/gmail.svg'
 import phoneIcon from '../../public/phone.svg'
 import { Gallery } from "react-grid-gallery";
+import { InstagramEmbed } from 'react-social-media-embed';
 
 const inter = Inter({ subsets: ['latin'] })
 const images = [
@@ -105,8 +106,8 @@ export default function Home() {
         </div>
       </div>
       <div className='text-center bg-white'>
-        <h3 className='my-12 text-4xl font-bold text-black'>
-          SONHOS JÁ REALIZADOS
+        <h3 className='px-2 my-12 text-4xl font-bold text-black'>
+          Sonhos Já Realizados
         </h3>
       <Gallery images={images} rowHeight={400} />
         <div className='my-12'>
@@ -114,8 +115,16 @@ export default function Home() {
             onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
             className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
           >
-            QUERO REALIZAR O MEU SONHO
+            SOLICITAR ORÇAMENTO GRATUITO
           </button>
+        </div>
+      </div>
+      <div>
+        <h2 className='px-8 my-12 text-4xl font-bold text-center text-black sm:text-5xl'>
+          Acompanhe o nosso trabalho
+        </h2>
+        <div className='flex justify-around'>
+          <InstagramEmbed url="https://www.instagram.com/p/Cmguz-Iu8QO/" width={700} captioned/>
         </div>
       </div>
       <div className='flex pt-8 text-center bg-black'>
