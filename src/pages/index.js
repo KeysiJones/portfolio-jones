@@ -45,10 +45,10 @@ export default function Home() {
           />}
         </div>
       </div>
-      <div className='text-center'>
-        <h2 className='text-4xl font-bold'>Contato</h2>
+      <div className='pt-8 text-center bg-black'>
+        <h2 className='text-4xl font-bold text-white'>Contato</h2>
       </div>
-      <div className='flex justify-center p-8 bg-white'>
+      <div className='flex justify-center p-8 bg-black'>
         <Image src={instagramLogo} width={65} height={65} alt='' className='mx-2' />
         <Image src={whatsappLogo} width={65} height={65} alt='' className='mx-2' />
       </div>
