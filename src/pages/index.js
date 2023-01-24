@@ -25,9 +25,9 @@ export default function Home() {
       <div id='hero-section' className='flex flex-col justify-center h-[80vh] sm:h-screen bg-white bg-top md:bg-top md:bg-hero bg-hero-mobile top-10'>
         <div className='mx-8 text-left md:text-center md:relative bottom-7'>
           <h1 className='mt-8 mb-4 text-5xl text-white !opacity-1 font-bold'>Efeito cimento queimado</h1>
-          <p className='mb-4 text-2xl text-white'>O Efeito decorativo que vai transformar o seu lar.</p>
+          <p className='mb-4 text-2xl text-white'>O Efeito decorativo que vai <b>transformar</b> o seu lar.</p>
           <div>
-            <button onClick={() => document.getElementById("antes-e-depois").scrollIntoView({ behavior: 'smooth' })} className='p-2 px-8 font-bold text-white transition-all bg-gray-900 rounded-md hover:bg-gray-500 sm:hover:scale-110'>CONHEÇA NOSSOS PROJETOS</button>
+            <button onClick={() => document.getElementById("antes-e-depois").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>CONHEÇA NOSSOS PROJETOS</button>
           </div>
         </div>
       </div>
@@ -45,9 +45,12 @@ export default function Home() {
           />}
         </div>
       </div>
+      <div className='text-center'>
+        <h2 className='text-4xl font-bold'>Contato</h2>
+      </div>
       <div className='flex justify-center p-8 bg-white'>
-        <Image src={instagramLogo} width={65} height={65} alt=''/>
-        <Image src={whatsappLogo} width={65} height={65} alt=''/>
+        <Image src={instagramLogo} width={65} height={65} alt='' className='mx-2' />
+        <Image src={whatsappLogo} width={65} height={65} alt='' className='mx-2' />
       </div>
     </div>
   )
