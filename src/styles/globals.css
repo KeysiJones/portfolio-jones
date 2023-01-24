@@ -90,6 +90,10 @@ body {
   height: 100%;
 }
 
+div#ReactGridGallery > div {
+  justify-content: center;
+}
+
 /*body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
