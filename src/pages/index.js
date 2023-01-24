@@ -4,7 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import instagramLogo from '../../public/insta.svg'
-import whatsappLogo from '../../public/whats.svg'
+import whatsappLogo from '../../public/whats.png'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -49,8 +49,20 @@ export default function Home() {
         <h2 className='text-4xl font-bold text-white'>Contato</h2>
       </div>
       <div className='flex justify-center p-8 bg-black'>
-        <Image src={instagramLogo} width={65} height={65} alt='' className='mx-2' />
-        <Image src={whatsappLogo} width={65} height={65} alt='' className='mx-2' />
+        <Image onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} 
+          src={instagramLogo} 
+          width={65} 
+          height={65} 
+          alt='' 
+          className='mx-2 hover:cursor-pointer' 
+        />
+        <Image onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')} 
+          src={whatsappLogo}
+          width={65} 
+          height={65} 
+          alt='' 
+          className='mx-2 hover:cursor-pointer'
+        />
       </div>
     </div>
   )
