@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero': "url('/hero-1.png')",
-        'hero-mobile': "url('/depois.png')"
+        'hero': "url('/hero-1.webp')",
+        'hero-mobile': "url('/depois.webp')"
       },
     },
   },

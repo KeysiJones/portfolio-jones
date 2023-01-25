@@ -11,12 +11,12 @@ import { InstagramEmbed } from 'react-social-media-embed';
 const inter = Inter({ subsets: ['latin'] })
 const images = [
   {
-    src: "/parede.jpg",
+    src: "/parede.webp",
     width: 200,
     height: 212,
   },
   {
-     src: "/banheiro.jpg",
+     src: "/banheiro.webp",
      width: 1000,
      height: 1000,
      /*tags: [
@@ -27,39 +27,44 @@ const images = [
      //caption: "After Rain (Jeshu John - designerspics.com)",
   },
   {
-    src: "/cozinha-geladeira.jpg",
+    src: "/cozinha-geladeira.webp",
     width: 200,
     height: 212,
   },
   {
-     src: "/cozinha.jpg",
+     src: "/cozinha.webp",
      width: 200,
      height: 212,
   },
   {
-    src: "/sala-de-estar.jpg",
+    src: "/sala-de-estar.webp",
     width: 200,
     height: 212,
  },
  {
-  src: "/living.jpg",
+  src: "/living.webp",
   width: 200,
   height: 212,
 },
 {
-  src: "/banheiro-escuro.jpg",
+  src: "/banheiro-escuro.webp",
   width: 200,
   height: 212,
 },
 {
-  src: "/area.jpg",
+  src: "/area.webp",
   width: 200,
   height: 212,
 },
 ];
 
 export default function Home() {
-  //bg-[#a9a9a954]
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 900;
+  const instagramProps = {
+    url: "https://www.instagram.com/p/Cmguz-Iu8QO/",
+    captioned: true,
+    width: 500,
+  }
 
   return (
     <div className={'h-[92vh] text-black bg-white transition-all ' + inter.className}>
@@ -83,7 +88,7 @@ export default function Home() {
         </div>
       </div>
       <div id='antes-e-depois' className='bg-white md:flex'>
-        <div className='self-center max-w-4xl p-8 md:px-24'>
+        <div className='self-center max-w-4xl p-8 md:px-12'>
           <h2 className='text-4xl font-bold'>TRANSFORME O SEU AMBIENTE</h2>
           <p className='mt-4 text-2xl font-light'>O efeito cimento queimado transforma um ambiente sem graça em um lugar <b>aconchegante e moderno.</b></p>
           <p className='mt-4 text-2xl'><b>Arraste a foto</b> e veja o antes e o depois de um dos nossos projetos.</p>
@@ -99,40 +104,42 @@ export default function Home() {
         <div className='self-center mx-2 rounded-md'>
           {<ReactCompareSlider
             position={43}
-            className='md:max-w-[35vw] mx-2 my-20 rounded-lg'
-            itemOne={<ReactCompareSliderImage src="/antes.png" alt="Image one" />}
-            itemTwo={<ReactCompareSliderImage src="/depois.png" alt="Image two" />}
+            className='md:max-w-[35vw] mx-2 sm:my-20 my-10 rounded-lg'
+            itemOne={<ReactCompareSliderImage src="/antes.webp" alt="Image one" />}
+            itemTwo={<ReactCompareSliderImage src="/depois.webp" alt="Image two" />}
           />}
         </div>
       </div>
-      <div className='text-center bg-white'>
+      <div className='text-center bg-white sm:mx-5'>
         <h3 className='px-2 my-12 text-4xl font-bold text-black'>
           Sonhos Já Realizados
         </h3>
       <Gallery images={images} rowHeight={400} />
-        <div className='my-12'>
-          <button
-            onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
-            className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
-          >
-            SOLICITAR ORÇAMENTO GRATUITO
-          </button>
+      </div>
+      <div className='flex flex-col sm:justify-between sm:flex-row sm:m-28'>
+        <div className='flex flex-col self-center mx-6 my-12 sm:relative sm:max-w-2xl sm:bottom-20'>
+          <h2 className='text-3xl font-bold sm:text-4xl'>Acompanhe o nosso trabalho</h2>
+          <p className='mt-4 text-2xl font-light'>Diariamente compartilhamos o nosso trabalho no Instagram.</p>
+          <p className='mt-4 text-2xl font-light'><b>Siga o nosso perfil</b> para se manter atualizado e receber as nossas novidades em primeira mão.</p>
+        </div>
+        <div className='flex justify-around'>   
+          <InstagramEmbed {...instagramProps} height={720} />
         </div>
       </div>
-      <div>
-        <h2 className='px-8 my-12 text-4xl font-bold text-center text-black sm:text-5xl'>
-          Acompanhe o nosso trabalho
-        </h2>
-        <div className='flex justify-around'>
-          <InstagramEmbed url="https://www.instagram.com/p/Cmguz-Iu8QO/" width={700} captioned/>
-        </div>
+      <div className='my-12 text-center'>
+        <button
+          onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
+          className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
+        >
+          SOLICITAR ORÇAMENTO GRATUITO
+        </button>
       </div>
       <div className='flex pt-8 text-center bg-black'>
-        <div className='flex flex-col justify-center w-full md:flex-row'>
+        <div className='flex flex-col justify-center w-full'>
           <div className='flex flex-col items-center self-center'>
-            <p className='text-2xl font-bold text-white'>FRG PINTURAS</p>
+            <p className='text-2xl font-bold text-white'>FRG PINTURAS E DECORAÇÕES</p>
             {/*<Image src='/logo.jpg' alt='' width={70} height={70} className='ml-4 transition-all border-2 border-black hover:cursor-pointer rounded-full !opacity-1 hover:scale-110' onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} />*/}
-            {<p className='mx-4 text-white'>CNPJ 45.634.926/0001-77</p>}
+            <p className='mx-4 text-white'>CNPJ 45.634.926/0001-77</p>
           </div>
           <div>
             {/*<h2 className='text-4xl font-bold text-white'>Fale conosco</h2>*/}
