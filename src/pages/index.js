@@ -64,6 +64,7 @@ export default function Home() {
     url: "https://www.instagram.com/p/Cmguz-Iu8QO/",
     captioned: true,
     width: 500,
+    height: 720
   }
 
   return (
@@ -122,8 +123,8 @@ export default function Home() {
           <p className='mt-4 text-2xl font-light'>Diariamente compartilhamos o nosso trabalho no Instagram.</p>
           <p className='mt-4 text-2xl font-light'><b>Siga o nosso perfil</b> para se manter atualizado e receber as nossas novidades em primeira mão.</p>
         </div>
-        <div className='flex justify-around'>   
-          <InstagramEmbed {...instagramProps} height={720} />
+        <div className='flex justify-center'>   
+          <InstagramEmbed url="https://www.instagram.com/p/CY1XJzOO1Kn/" width={500} height={785} captioned/>
         </div>
       </div>
       <div className='my-12 text-center'>
