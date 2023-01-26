@@ -138,7 +138,7 @@ export default function Home() {
       <div className='flex pt-8 text-center bg-black'>
         <div className='flex flex-col justify-center w-full'>
           <div className='flex flex-col items-center self-center'>
-            <p className='text-2xl font-bold text-white'>FRG PINTURAS E DECORAÇÕES</p>
+            <p className='mx-4 text-2xl font-bold text-white'>FRG PINTURAS E DECORAÇÕES</p>
             {/*<Image src='/logo.jpg' alt='' width={70} height={70} className='ml-4 transition-all border-2 border-black hover:cursor-pointer rounded-full !opacity-1 hover:scale-110' onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} />*/}
             <p className='mx-4 text-white'>CNPJ 45.634.926/0001-77</p>
           </div>
