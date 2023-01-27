@@ -7,6 +7,7 @@ import gmailIcon from '../../public/gmail.svg'
 import phoneIcon from '../../public/phone.svg'
 import { Gallery } from "react-grid-gallery";
 import { InstagramEmbed } from 'react-social-media-embed';
+import { Carousel } from 'react-responsive-carousel';
 
 const inter = Inter({ subsets: ['latin'] })
 const images = [
@@ -16,15 +17,15 @@ const images = [
     height: 212,
   },
   {
-     src: "/banheiro.webp",
-     width: 1000,
-     height: 1000,
-     /*tags: [
-      { value: "Cimento Queimado", title: "Cimento Queimado  " },
-      { value: "Banheiro", title: "Banheiro" },
-   ],*/
-     //isSelected: true,
-     //caption: "After Rain (Jeshu John - designerspics.com)",
+    src: "/banheiro.webp",
+    width: 1000,
+    height: 1000,
+    /*tags: [
+     { value: "Cimento Queimado", title: "Cimento Queimado  " },
+     { value: "Banheiro", title: "Banheiro" },
+  ],*/
+    //isSelected: true,
+    //caption: "After Rain (Jeshu John - designerspics.com)",
   },
   {
     src: "/cozinha-geladeira.webp",
@@ -32,30 +33,30 @@ const images = [
     height: 212,
   },
   {
-     src: "/cozinha.webp",
-     width: 200,
-     height: 212,
+    src: "/cozinha.webp",
+    width: 200,
+    height: 212,
   },
   {
     src: "/sala-de-estar.webp",
     width: 200,
     height: 212,
- },
- {
-  src: "/living.webp",
-  width: 200,
-  height: 212,
-},
-{
-  src: "/banheiro-escuro.webp",
-  width: 200,
-  height: 212,
-},
-{
-  src: "/area.webp",
-  width: 200,
-  height: 212,
-},
+  },
+  {
+    src: "/living.webp",
+    width: 200,
+    height: 212,
+  },
+  {
+    src: "/banheiro-escuro.webp",
+    width: 200,
+    height: 212,
+  },
+  {
+    src: "/area.webp",
+    width: 200,
+    height: 212,
+  },
 ];
 
 export default function Home() {
@@ -94,11 +95,11 @@ export default function Home() {
           <p className='mt-4 text-2xl font-light'>O efeito cimento queimado transforma um ambiente sem graça em um lugar <b>aconchegante e moderno.</b></p>
           <p className='mt-4 text-2xl'><b>Arraste a foto</b> e veja o antes e o depois de um dos nossos projetos.</p>
           <div className='mt-12'>
-            <button 
+            <button
               onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
               className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
             >
-                SOLICITAR ORÇAMENTO GRATUITO
+              SOLICITAR ORÇAMENTO GRATUITO
             </button>
           </div>
         </div>
@@ -112,30 +113,46 @@ export default function Home() {
         </div>
       </div>
       <div className='text-center bg-white sm:mx-5'>
-        <h3 className='px-2 my-12 text-4xl font-bold text-black'>
+        <h3 className='px-2 text-4xl font-bold text-black my-14 sm:text-5xl'>
           Sonhos Já Realizados
         </h3>
-      <Gallery images={images} rowHeight={400} />
+        <Gallery images={images} rowHeight={400} />
       </div>
+      <h3 className='px-4 mt-20 text-4xl font-bold text-center text-black mb-14 sm:text-5xl'>
+        O que os nossos clientes dizem
+      </h3>
+      <Carousel
+        autoPlay
+        className='max-w-md mx-8 !mb-12 rounded-md sm:max-w-xl sm:m-auto bg-white-400'
+        infiniteLoop
+        stopOnHover 
+        showArrows={false}
+        interval={10000}
+      >
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+      </Carousel>
       <div className='flex flex-col sm:justify-between sm:flex-row sm:m-28'>
         <div className='flex flex-col self-center mx-6 my-12 sm:relative sm:max-w-2xl sm:bottom-20'>
-          <h2 className='text-3xl font-bold sm:text-4xl'>Acompanhe o nosso trabalho</h2>
+          <h2 className='mb-2 text-4xl font-bold sm:text-5xl'>Acompanhe o nosso trabalho</h2>
           <p className='mt-4 text-2xl font-light'>Diariamente compartilhamos o nosso trabalho no Instagram.</p>
           <p className='mt-4 text-2xl font-light'><b>Siga o nosso perfil</b> para se manter atualizado e receber as nossas novidades em primeira mão.</p>
           <p className='mt-4 text-2xl font-light'>Você vai se apaixonar 😍</p>
+          <div className='my-12'>
+            <button
+              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
+              className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
+            >
+              SOLICITAR ORÇAMENTO GRATUITO
+            </button>
+          </div>
         </div>
-        <div className='flex justify-center'>   
-          <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" width={500} height={785} captioned/>
+        <div className='flex justify-center'>
+          <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" width={500} height={785} captioned />
         </div>
       </div>
-      <div className='my-12 text-center'>
-        <button
-          onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
-          className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
-        >
-          SOLICITAR ORÇAMENTO GRATUITO
-        </button>
-      </div>
+      
       <div className='flex pt-8 text-center bg-black'>
         <div className='flex flex-col justify-center w-full'>
           <div className='flex flex-col items-center self-center'>
@@ -189,5 +206,16 @@ export default function Home() {
         </div>*/}
       </div>
     </div>
+  )
+}
+
+const CarouselItem = () => {
+  return (
+  <div className='min-h-[530px] sm:min-h-[450px]'>
+    <div className='px-8 pt-8 pb-12 text-lg font-light sm:text-2xl sm:text-center'>
+      Empresa ágil, atenciosa e cordial no atendimento. Tive um rápido retorno de orçamento e execução da pintura. Pratica um valor de acordo com o mercado. O Pedro é um profissional cuidadoso e muito detalhista, além de muito disposto. Agradeço de coração a execução da minha parede de cimento queimado, ficou maravilhosa, exatamente como eu queria.
+    </div>
+    <p className='text-xl'>- Gabriela Schein</p>
+  </div>
   )
 }
