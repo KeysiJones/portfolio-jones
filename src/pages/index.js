@@ -104,12 +104,14 @@ export default function Home() {
           </div>
         </div>
         <div className='self-center mx-2 rounded-md'>
-          {<ReactCompareSlider
-            position={43}
-            className='md:max-w-[35vw] mx-2 sm:my-20 my-10 rounded-lg'
-            itemOne={<ReactCompareSliderImage src="/antes.webp" alt="Image one" />}
-            itemTwo={<ReactCompareSliderImage src="/depois.webp" alt="Image two" />}
-          />}
+          {
+            <ReactCompareSlider
+              position={43}
+              className='md:max-w-[35vw] mx-2 sm:my-20 my-10 rounded-lg'
+              itemOne={<ReactCompareSliderImage src="/antes.webp" alt="Image one" />}
+              itemTwo={<ReactCompareSliderImage src="/depois.webp" alt="Image two" />}
+            />
+          }
         </div>
       </div>
       <div className='text-center bg-white sm:mx-5'>
@@ -129,9 +131,15 @@ export default function Home() {
         showArrows={false}
         interval={10000}
       >
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
+        <CarouselItem
+          author="Dora Pavão"
+          text="Pedro é muito profissional e seu serviço é impecável: rápido, limpo e perfeito. O contratei 2 vezes para consertar serviços que outro pintor (que dizia saber fazer cimento queimado) fez e que não ficaram como eu queria.
+            Ele consegue deixar exatamente como o cliente deseja: com o efeito mais marcado ou mais esfumado e delicado.
+            Super indico!"
+        />
+        <CarouselItem author="Gabriela Schein" text="Empresa ágil, atenciosa e cordial no atendimento. Tive um rápido retorno de orçamento e execução da pintura. Pratica um valor de acordo com o mercado. O Pedro é um profissional cuidadoso e muito detalhista, além de muito disposto. Agradeço de coração a execução da minha parede de cimento queimado, ficou maravilhosa, exatamente como eu queria."/>
+        <CarouselItem author="Aislan" text="Realizei a pintura do meu apartamento com a FRG e tive uma ótima experiência! Foram muito profissionais desde o primeiro atendimento, para elaboração do orçamento, até a finalização do trabalho! Recomendo!"/>
+        <CarouselItem author="Marcus Vinícius" text="Super indico! Profissional qualificado, com preço justo, pontualidade no prazo e um trabalho impecável, desde o orçamento até a finalização da obra. Por mais profissionais assim."/>
       </Carousel>
       <div className='flex flex-col sm:justify-between sm:flex-row sm:m-28'>
         <div className='flex flex-col self-center mx-6 my-12 sm:relative sm:max-w-2xl sm:bottom-20'>
@@ -149,7 +157,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex justify-center'>
-          <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" width={500} height={785} captioned />
+          <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" width={500} height={740} captioned />
         </div>
       </div>
       
@@ -209,13 +217,13 @@ export default function Home() {
   )
 }
 
-const CarouselItem = () => {
+const CarouselItem = ({ text, author }) => {
   return (
   <div className='min-h-[530px] sm:min-h-[450px]'>
     <div className='px-8 pt-8 pb-12 text-lg font-light sm:text-2xl sm:text-center'>
-      Empresa ágil, atenciosa e cordial no atendimento. Tive um rápido retorno de orçamento e execução da pintura. Pratica um valor de acordo com o mercado. O Pedro é um profissional cuidadoso e muito detalhista, além de muito disposto. Agradeço de coração a execução da minha parede de cimento queimado, ficou maravilhosa, exatamente como eu queria.
+      &quot;{ text }&quot;
     </div>
-    <p className='text-xl'>- Gabriela Schein</p>
+    <p className='text-xl'>- {author}</p>
   </div>
   )
 }
