@@ -1,21 +1,22 @@
+import Link from 'next/link';
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 
 export const Sidebar = (props) => {
   return (
     <Menu {...props}>
-      <a className="menu-item" href="/">
+      <Link className="menu-item" href="/">
         Início
-      </a>
-      <a className="menu-item" href="/salads">
+      </Link>
+      <Link className="menu-item" href="/">
         Sobre a FRG
-      </a>
-      <a className="menu-item" href="/pizzas">
+      </Link>
+      <Link className="menu-item" href="/">
         Contato
-      </a>
-      <a className="menu-item" href="/#nossos-projetos">
+      </Link>
+      <Link className="menu-item" href="/#nossos-projetos">
         Nossos Projetos
-      </a>
+      </Link>
     </Menu>
   );
 };
