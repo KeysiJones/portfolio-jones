@@ -5,7 +5,7 @@ import { slide as Menu } from 'react-burger-menu';
 export const Sidebar = (props) => {
   return (
     <Menu {...props}>
-      <Link className="menu-item" href="/">
+      <Link className="menu-item" href="/#hero-section">
         Início
       </Link>
       <Link className="menu-item" href="/">
