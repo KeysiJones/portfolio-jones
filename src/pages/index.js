@@ -1,13 +1,33 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+// import styles from '@/styles/Home.module.css'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
-import gmailIcon from '../../public/gmail.svg'
-import phoneIcon from '../../public/phone.svg'
+// import gmailIcon from '../../public/gmail.svg'
+// import phoneIcon from '../../public/phone.svg'
 import { Gallery } from "react-grid-gallery";
 import { InstagramEmbed } from 'react-social-media-embed';
 import { Carousel } from 'react-responsive-carousel';
+import GoogleMapReact from 'google-map-react'
+import { Icon } from '@iconify/react'
+import locationIcon from '@iconify/icons-mdi/map-marker'
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { useCallback, useState } from 'react';
+import { Sidebar } from '@/components/Sidebar';
+
+export async function getStaticProps() {
+  return { props: { mapsApiKey: process.env.REACT_MAPS_API_KEY } }
+}
+
+const containerStyle = {
+  width: '1000px',
+  height: '600px',
+  margin: 'auto',
+};
+
+const center = {
+  lat: -30.02837,
+  lng: -51.2322455,
+};
 
 const inter = Inter({ subsets: ['latin'] })
 const images = [
@@ -59,22 +79,30 @@ const images = [
   },
 ];
 
-export default function Home() {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 900;
-  const instagramProps = {
-    url: "https://www.instagram.com/p/Cmguz-Iu8QO/",
-    captioned: true,
-    width: 500,
-    height: 720
-  }
+// const location = {
+//   address: 'R. Siqueira Campos, 1171 - Centro Histórico, Porto Alegre - RS, 90010-001',
+//   lat: -30.02837,
+//   lng: -51.2322455,
+// } // our location object from earlier
+
+export default function Home({ mapsApiKey }) {
+
+  // const instagramProps = {
+  //   url: "https://www.instagram.com/p/Cmguz-Iu8QO/",
+  //   captioned: true,
+  //   width: 500,
+  //   height: 720
+  // }
 
   return (
     <div className={'h-[92vh] text-black bg-white transition-all ' + inter.className}>
       <div className='fixed z-10 flex justify-between w-full px-4 py-1 bg-white shadow-md sm:py-2'>
         <Image src='/logo.jpg' alt='' width={60} height={60} className='transition-all hover:cursor-pointer rounded-full !opacity-1 hover:scale-110' onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} />
-        <div>
+        <Sidebar right className="sidebar-menu" />
+        <div className='desktop-menu'>
           <ul className={'flex items-center h-full !opacity-1'}>
             <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer' onClick={() => document.getElementById("hero-section").scrollIntoView({ behavior: 'smooth' })}>Início</li>
+            <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer' onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })}>Nossos Projetos</li>
             <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer'>Sobre a FRG</li>
             <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer'>Contato</li>
           </ul>
@@ -85,7 +113,7 @@ export default function Home() {
           <h1 className='mt-8 mb-4 text-5xl text-white !opacity-1 font-bold'>Efeito cimento queimado</h1>
           <p className='mb-4 text-2xl text-white'>O Efeito decorativo que vai <b>transformar</b> o seu lar.</p>
           <div>
-            <button onClick={() => document.getElementById("antes-e-depois").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>CONHEÇA NOSSOS PROJETOS</button>
+            <button onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>CONHEÇA NOSSOS PROJETOS</button>
           </div>
         </div>
       </div>
@@ -115,7 +143,7 @@ export default function Home() {
         </div>
       </div>
       <div className='text-center bg-white sm:mx-5'>
-        <h3 className='px-2 text-4xl font-bold text-black my-14 sm:text-5xl'>
+        <h3 id='nossos-projetos' className='px-2 py-20 text-4xl font-bold text-black sm:text-5xl'>
           Sonhos Já Realizados
         </h3>
         <Gallery images={images} rowHeight={400} />
@@ -124,12 +152,13 @@ export default function Home() {
         O que os nossos clientes dizem
       </h3>
       <Carousel
+        showThumbs={false}
         autoPlay
         className='max-w-md mx-8 !mb-12 rounded-md sm:max-w-xl sm:m-auto bg-white-400'
         infiniteLoop
-        stopOnHover 
+        stopOnHover
         showArrows={false}
-        interval={10000}
+        interval={5000}
       >
         <CarouselItem
           author="Dora Pavão"
@@ -137,9 +166,9 @@ export default function Home() {
             Ele consegue deixar exatamente como o cliente deseja: com o efeito mais marcado ou mais esfumado e delicado.
             Super indico!"
         />
-        <CarouselItem author="Gabriela Schein" text="Empresa ágil, atenciosa e cordial no atendimento. Tive um rápido retorno de orçamento e execução da pintura. Pratica um valor de acordo com o mercado. O Pedro é um profissional cuidadoso e muito detalhista, além de muito disposto. Agradeço de coração a execução da minha parede de cimento queimado, ficou maravilhosa, exatamente como eu queria."/>
-        <CarouselItem author="Aislan" text="Realizei a pintura do meu apartamento com a FRG e tive uma ótima experiência! Foram muito profissionais desde o primeiro atendimento, para elaboração do orçamento, até a finalização do trabalho! Recomendo!"/>
-        <CarouselItem author="Marcus Vinícius" text="Super indico! Profissional qualificado, com preço justo, pontualidade no prazo e um trabalho impecável, desde o orçamento até a finalização da obra. Por mais profissionais assim."/>
+        <CarouselItem author="Gabriela Schein" text="Empresa ágil, atenciosa e cordial no atendimento. Tive um rápido retorno de orçamento e execução da pintura. Pratica um valor de acordo com o mercado. O Pedro é um profissional cuidadoso e muito detalhista, além de muito disposto. Agradeço de coração a execução da minha parede de cimento queimado, ficou maravilhosa, exatamente como eu queria." />
+        <CarouselItem author="Aislan" text="Realizei a pintura do meu apartamento com a FRG e tive uma ótima experiência! Foram muito profissionais desde o primeiro atendimento, para elaboração do orçamento, até a finalização do trabalho! Recomendo!" />
+        <CarouselItem author="Marcus Vinícius" text="Super indico! Profissional qualificado, com preço justo, pontualidade no prazo e um trabalho impecável, desde o orçamento até a finalização da obra. Por mais profissionais assim." />
       </Carousel>
       <div className='flex flex-col sm:justify-between sm:flex-row sm:m-28'>
         <div className='flex flex-col self-center mx-6 my-12 sm:relative sm:max-w-2xl sm:bottom-20'>
@@ -160,7 +189,10 @@ export default function Home() {
           <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" width={500} height={740} captioned />
         </div>
       </div>
-      
+      <div className='h-screen'>
+        <MyMapComponent mapsApiKey={mapsApiKey} />
+      </div>
+      {/* <Map location={location} zoomLevel={17}/> */}
       <div className='flex pt-8 text-center bg-black'>
         <div className='flex flex-col justify-center w-full'>
           <div className='flex flex-col items-center self-center'>
@@ -219,11 +251,72 @@ export default function Home() {
 
 const CarouselItem = ({ text, author }) => {
   return (
-  <div className='min-h-[530px] sm:min-h-[450px]'>
-    <div className='px-8 pt-8 pb-12 text-lg font-light sm:text-2xl sm:text-center'>
-      &quot;{ text }&quot;
+    <div className='min-h-[530px] sm:min-h-[450px]'>
+      <div className='px-8 pt-8 pb-12 text-lg font-light sm:text-2xl sm:text-center'>
+        &quot;{text}&quot;
+      </div>
+      <p className='text-xl'>- {author}</p>
     </div>
-    <p className='text-xl'>- {author}</p>
-  </div>
   )
+}
+
+// const Map = ({ location, zoomLevel, mapsApiKey }) => (
+//   <div className="map">
+//     <h2 className="map-h2">Come Visit Us At Our Campus</h2>
+
+//     <div className="google-map">
+//       <GoogleMapReact
+//         bootstrapURLKeys={{ key: mapsApiKey }}
+//         defaultCenter={location}
+//         defaultZoom={zoomLevel}
+//       >
+//         <LocationPin
+//           lat={location.lat}
+//           lng={location.lng}
+//           text={location.address}
+//         />
+//       </GoogleMapReact>
+//     </div>
+//   </div>
+// )
+
+// const LocationPin = ({ text }) => (
+//   <div className="pin">
+//     <Icon icon={locationIcon} className="pin-icon" />
+//     <p className="pin-text">{text}</p>
+//   </div>
+// )
+
+function MyMapComponent({ mapsApiKey }) {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: mapsApiKey
+  })
+
+  const [map, setMap] = useState(null)
+
+  const onLoad = useCallback(function callback(map) {
+    // This is just an example of getting and using the map instance!!! don't just blindly copy!
+    const bounds = new window.google.maps.LatLngBounds(center);
+    map.fitBounds(bounds);
+
+    setMap(map)
+  }, [])
+
+  const onUnmount = useCallback(function callback(map) {
+    setMap(null)
+  }, [])
+
+  return isLoaded ? (
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={10}
+      onLoad={onLoad}
+      onUnmount={onUnmount}
+    >
+      { /* Child components, such as markers, info windows, etc. */}
+      <></>
+    </GoogleMap>
+  ) : <></>
 }
