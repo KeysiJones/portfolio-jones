@@ -445,6 +445,10 @@ a {
   opacity: 1
 }
 
+.carousel-status {
+  width: 100%;
+}
+
 
 // GOOGLE MAPS CSS
 
@@ -761,3 +765,17 @@ li.menu-items:hover ul.dropdown {
     width: 4rem;
     height: 4rem;
   }
+
+  li.dot {
+    background-color: black !important;
+  }
+
+  /*div.parcerias {
+    width: 100vw;
+    height: 12rem;
+  }
+
+  div.parcerias img {
+    width: 20px !important;
+    height: 20px !important;
+  }*/
