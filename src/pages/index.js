@@ -163,8 +163,8 @@ export default function Home({ mapsApiKey }) {
       </div>
       <div id='hero-section' className='bg-center flex flex-col justify-center h-[80vh] sm:h-screen bg-white md:bg-hero bg-hero-mobile top-10'>
         <div className='px-8 pb-8 text-left md:text-center md:relative bottom-7 bg-[#00000069]'>
-          <h1 className='mt-8 mb-4 text-5xl text-white !opacity-1 font-bold'>Efeito cimento queimado</h1>
-          <p className='mb-4 text-2xl text-white'>O Efeito decorativo que vai <b>transformar</b> o seu lar.</p>
+          <h1 className='mt-8 mb-4 text-5xl lg:text-6xl text-white !opacity-1 font-bold'>Efeito cimento queimado</h1>
+          <p className='mb-4 text-2xl text-white lg:text-3xl'>O Efeito decorativo que vai <b>transformar</b> o seu lar.</p>
           <div>
             <button onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-600 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>CONHEÇA NOSSOS PROJETOS</button>
           </div>
@@ -197,24 +197,34 @@ export default function Home({ mapsApiKey }) {
       </div>
       <div className='relative flex flex-col items-center justify-center w-full p-4 bg-white lg:h-[90vh]'>
         <h2 className='my-20 text-4xl font-bold text-center sm:text-5xl'>Nossos Parceiros</h2>
-        <div className='flex'>
-        <div className='parcerias'>
-          <Image src="/decor-colors-logo.png" width={250} height={250} alt='logo Decor Colors' />
-        </div>
-        <div className='parcerias'>
-          <Image src="/suvinil-logo.png" width={250} height={250} alt='logo Suvinil' />
-        </div>
-        <div className='parcerias'>
-          <Image src="/logo-coral.png" width={250} height={250} alt='logo Tintas Coral' />
-        </div>
-        <div className='parcerias'>
-          <Image src="/logo-tintas-renner.jpeg" width={250} height={250} alt='logo Tintas Renner' />
-        </div>
+        <div className='flex flex-col lg:flex-row'>
+          <div className='flex'>
+            <div className='parcerias'>
+              <Image src="/decor-colors-logo.png" width={250} height={250} alt='logo Decor Colors' />
+            </div>
+            <div className='parcerias'>
+              <Image src="/suvinil-logo.png" width={250} height={250} alt='logo Suvinil' />
+            </div>
+            <div className='parcerias'>
+              <Image src="/logo-coral.png" width={250} height={250} alt='logo Tintas Coral' />
+            </div>
+          </div>
+          <div className='flex'>
+            <div className='parcerias'>
+              <Image src="/logo-tintas-renner.jpeg" width={250} height={250} alt='logo Tintas Renner' />
+            </div>
+            <div className='parcerias'>
+              <Image src="/adelbras-logo.jpeg" width={250} height={250} alt='logo Tintas Renner' />
+            </div>
+            <div className='parcerias'>
+              <Image src="/salvabras-logo.jpeg" width={250} height={250} alt='logo Tintas Renner' />
+            </div>
+          </div>
         </div>
       </div>
       <div className='text-center bg-white sm:mx-3'>
         <h3 id='nossos-projetos' className='px-2 py-16 text-4xl font-bold text-black sm:text-5xl'>
-          Sonhos Já Realizados
+          Nossos Projetos
         </h3>
         <Gallery images={images} rowHeight={400} />
       </div>
@@ -255,7 +265,11 @@ export default function Home({ mapsApiKey }) {
         <div className='flex flex-col self-center mx-8 mt-12 mb-8 sm:mx-6 lg:relative sm:max-w-2xl sm:bottom-20'>
           <h2 className='mb-2 text-4xl font-bold sm:text-5xl'>Acompanhe o nosso trabalho</h2>
           <p className='mt-4 text-2xl font-light'>Diariamente compartilhamos o nosso trabalho no Instagram.</p>
-          <p className='mt-4 text-2xl font-light'><b>Siga o nosso perfil</b> para se manter atualizado e receber as nossas novidades em primeira mão.</p>
+          <p className='mt-4 text-2xl font-light'>
+            <a href='https://instagram.com/frgpinturas'>
+              <b className='underline'>Siga o nosso perfil</b>
+            </a>
+            {''} para se manter atualizado e receber as nossas novidades em primeira mão.</p>
           <p className='mt-4 text-2xl font-light'>Você vai se apaixonar 😍</p>
           <div className='my-12'>
             <button
@@ -279,23 +293,20 @@ export default function Home({ mapsApiKey }) {
       </div>
       <div className='flex pt-8 text-center bg-black'>
         <div className='flex flex-col justify-center w-full'>
-          <div className='flex flex-col items-center self-center'>
-            <p className='mx-4 text-2xl font-bold text-white'>FRG PINTURAS E DECORAÇÕES</p>
+          <h2 className='mx-4 text-4xl font-bold text-white'>CONTATO</h2>
+          <div className='flex flex-col items-start self-center mx-4 mt-4 sm:items-center md:flex-row'>
             {/*<Image src='/logo.jpg' alt='' width={70} height={70} className='ml-4 transition-all border-2 border-black hover:cursor-pointer rounded-full !opacity-1 hover:scale-110' onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} />*/}
-            <p className='mx-4 text-white'>CNPJ 45.634.926/0001-77</p>
+            <div className='flex items-center my-1'>
+              <Image src="/email-logo.png" alt='email logo' width={50} height={50}/>
+              <a href="mailto:pedrofragaprofissional@gmail.com" className='mx-4 text-white text-md sm:text-xl'>pedrofragaprofissional@gmail.com</a>
+            </div>
+            <div className='flex items-center my-1'>
+              <Image src="/phone.svg" alt='email logo' width={50} height={50}/>
+              <a href="tel:+5551991549280" className='mx-4 text-white text-md sm:text-xl'>Telefone: (51) 9154-9280</a>
+            </div>
           </div>
           <div>
-            {/*<h2 className='text-4xl font-bold text-white'>Fale conosco</h2>*/}
-            <div className='flex justify-center py-4 bg-black'>
-              {/* <Image onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')}
-                src='/insta-black.svg'
-                width={70}
-                height={70}
-                alt=''
-                className='mx-4 hover:cursor-pointer'
-              /> */}
-            </div>
-            <p className='mb-4 text-white'>{new Date().getFullYear()} - Todos os direitos reservados. </p>
+            <p className='my-4 text-white'>&copy; {new Date().getFullYear()} - FRG PINTURAS E DECORAÇÕES</p>
           </div>
         </div>
         {/*<div className='flex justify-center mt-2'>
