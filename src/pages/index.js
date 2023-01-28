@@ -280,7 +280,7 @@ export default function Home({ mapsApiKey }) {
           </div>
           <div>
             {/*<h2 className='text-4xl font-bold text-white'>Fale conosco</h2>*/}
-            <div className='flex justify-center py-8 bg-black'>
+            <div className='flex justify-center py-4 bg-black'>
               <Image onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')}
                 src='/insta-black.svg'
                 width={70}
@@ -296,6 +296,7 @@ export default function Home({ mapsApiKey }) {
                 className='mx-4 hover:cursor-pointer'
               />
             </div>
+            <p className='mb-4 text-white'>{new Date().getFullYear()} - Todos os direitos reservados. </p>
           </div>
         </div>
         {/*<div className='flex justify-center mt-2'>
