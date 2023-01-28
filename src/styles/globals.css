@@ -679,3 +679,41 @@ button span {
 li.menu-items:hover ul.dropdown {
   display: block;
 }
+
+//Instagram Embeded CSS
+
+@media all and (min-width: 900px) {
+  div.rsme-embed {
+    width: 100vw !important;
+    height: 90vh !important;
+  }
+}
+
+@media all and (min-width: 900px) {
+  div.rsme-instagram-embed {
+    width: 30vw !important;
+    height: 90vh !important;
+  }
+}
+
+@media all and (max-width: 900px) {
+  div.rsme-embed {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  div.rsme-embed iframe {
+    border: none !important;
+  }
+}
+
+@media all and (max-width: 900px) {
+  div.rsme-instagram-embed {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  div.rsme-instagram-embed iframe {
+    border: none !important;
+  }
+}

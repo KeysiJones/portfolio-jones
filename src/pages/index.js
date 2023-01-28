@@ -261,15 +261,15 @@ export default function Home({ mapsApiKey }) {
             </button>
           </div>
         </div>
-        <div className='flex justify-center'>
-          <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" width={500} height={740} captioned />
+        <div className='flex justify-center max-w-[100vw]'>
+          <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" captioned linkText='Ver no Instagram'/>
         </div>
       </div>
       <h3 className='px-2 mt-20 text-4xl font-bold text-center text-black mb-14 sm:text-5xl'>
         Onde estamos localizados
       </h3>
       <div id='mapwrapper' className='sm:mb-20'>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13817.183277125887!2d-51.2300568!3d-30.02837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd332597cdb14f1f5!2sFRG%20Pinturas%20e%20Decora%C3%A7%C3%B5es!5e0!3m2!1sen!2sbr!4v1674849156551!5m2!1sen!2sbr" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13817.183277125887!2d-51.2300568!3d-30.02837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd332597cdb14f1f5!2sFRG%20Pinturas%20e%20Decora%C3%A7%C3%B5es!5e0!3m2!1sen!2sbr!4v1674849156551!5m2!1sen!2sbr" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div className='flex pt-8 text-center bg-black'>
         <div className='flex flex-col justify-center w-full'>
