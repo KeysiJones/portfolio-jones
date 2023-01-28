@@ -262,7 +262,7 @@ export default function Home({ mapsApiKey }) {
           </div>
         </div>
         <div className='flex justify-center max-w-[100vw]'>
-          <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" captioned linkText='Ver no Instagram'/>
+          <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" captioned linkText='Ver no Instagram' placeholderSpinnerDisabled/>
         </div>
       </div>
       <h3 className='px-2 mt-20 text-4xl font-bold text-center text-black mb-14 sm:text-5xl'>
