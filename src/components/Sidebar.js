@@ -9,13 +9,16 @@ export const Sidebar = (props) => {
         Início
       </Link>
       <Link className="menu-item" href="/">
-        Sobre a FRG
+        Pinturas
       </Link>
       <Link className="menu-item" href="/">
-        Contato
+        Efeitos Decorativos
       </Link>
       <Link className="menu-item" href="/#nossos-projetos">
         Nossos Projetos
+      </Link>
+      <Link className="menu-item" href="/">
+        Sobre a FRG
       </Link>
     </Menu>
   );

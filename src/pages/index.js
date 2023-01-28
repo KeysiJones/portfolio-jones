@@ -7,20 +7,21 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import { Gallery } from "react-grid-gallery";
 import { InstagramEmbed } from 'react-social-media-embed';
 import { Carousel } from 'react-responsive-carousel';
-import GoogleMapReact from 'google-map-react'
-import { Icon } from '@iconify/react'
-import locationIcon from '@iconify/icons-mdi/map-marker'
+//import GoogleMapReact from 'google-map-react'
+//import { Icon } from '@iconify/react'
+//import locationIcon from '@iconify/icons-mdi/map-marker'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import { useCallback, useState } from 'react';
 import { Sidebar } from '@/components/Sidebar';
+import Link from 'next/link';
 
 export async function getStaticProps() {
   return { props: { mapsApiKey: process.env.REACT_MAPS_API_KEY } }
 }
 
 const containerStyle = {
-  width: '1000px',
-  height: '600px',
+  width: '800px',
+  height: '400px',
   margin: 'auto',
 };
 
@@ -33,7 +34,12 @@ const inter = Inter({ subsets: ['latin'] })
 const images = [
   {
     src: "/parede.webp",
-    width: 200,
+    width: 220,
+    height: 212,
+  },
+  {
+    src: "/decoracao-mica.jpg",
+    width: 350,
     height: 212,
   },
   {
@@ -48,32 +54,22 @@ const images = [
     //caption: "After Rain (Jeshu John - designerspics.com)",
   },
   {
-    src: "/cozinha-geladeira.webp",
-    width: 200,
-    height: 212,
-  },
-  {
-    src: "/cozinha.webp",
-    width: 200,
-    height: 212,
-  },
-  {
-    src: "/sala-de-estar.webp",
-    width: 200,
-    height: 212,
-  },
-  {
-    src: "/living.webp",
+    src: "/wide-living.webp",
     width: 200,
     height: 212,
   },
   {
     src: "/banheiro-escuro.webp",
+    width: 300,
+    height: 300,
+  },
+  {
+    src: "/area.webp",
     width: 200,
     height: 212,
   },
   {
-    src: "/area.webp",
+    src: "/mica-banheiro.webp",
     width: 200,
     height: 212,
   },
@@ -85,6 +81,63 @@ const images = [
 //   lng: -51.2322455,
 // } // our location object from earlier
 
+export const menuItems = [
+  {
+    title: 'Pinturas',
+    url: '/',
+    submenu: [
+      {
+        title: 'Pintura Interna',
+        url: 'web-design',
+      },
+      {
+        title: 'Pintura De Fachadas',
+        url: 'web-dev',
+      },
+      {
+        title: 'Pintura De Decks e Pergolados',
+        url: 'seo',
+      },
+    ],
+  },
+  {
+    title: 'Efeitos Decorativos',
+    url: '/',
+    submenu: [
+      {
+        title: 'Efeito Cimento Queimado',
+        url: 'web-design',
+      },
+      {
+        title: 'Quartzo Mica',
+        url: 'web-dev',
+      },
+      {
+        title: 'Marmorização Realista',
+        url: '/',
+      },
+    ],
+  },
+  {
+    title: 'Nossos Projetos',
+    url: '/',
+    submenu: [
+      {
+        title: 'web design',
+        url: 'web-design',
+      },
+      {
+        title: 'web development',
+        url: 'web-dev',
+      },
+      {
+        title: 'SEO',
+        url: 'seo',
+      },
+    ],
+  },
+];
+
 export default function Home({ mapsApiKey }) {
 
   // const instagramProps = {
@@ -93,33 +146,47 @@ export default function Home({ mapsApiKey }) {
   //   width: 500,
   //   height: 720
   // }
-
+  
   return (
     <div className={'h-[92vh] text-black bg-white transition-all ' + inter.className}>
       <div className='fixed z-10 flex justify-between w-full px-4 py-1 bg-white shadow-md sm:py-2'>
-        <Image src='/logo.jpg' alt='' width={60} height={60} className='transition-all hover:cursor-pointer rounded-full !opacity-1 hover:scale-110' onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} />
+        <div className='flex items-center self-center'>
+          <Image src='/logo.jpg' alt='' width={60} height={60} className='transition-all hover:cursor-pointer rounded-full !opacity-1 hover:scale-110' onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} />
+          <p className='relative sm:text-xl font-extrabold text-[#49473a] top-[.65rem]'>PINTURAS E DECORAÇÕES</p>
+        </div>
         <Sidebar right className="sidebar-menu" />
-        <div className='desktop-menu'>
+        <Navbar />
+        {/*<div className='mr-8 desktop-menu'>
           <ul className={'flex items-center h-full !opacity-1'}>
-            <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer' onClick={() => document.getElementById("hero-section").scrollIntoView({ behavior: 'smooth' })}>Início</li>
+            <li className='p-2'>
+              <span>Pinturas</span>
+              <div>
+                <Link href="/">Pinturas externas</Link>
+              </div>
+            </li>
+            <div className='p-2'>Efeitos Decorativos</div>
+            <div className='p-2'>Projetos</div>
+            <div className='p-2'>Sobre a FRG</div>
+            {/*<li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer' onClick={() => document.getElementById("hero-section").scrollIntoView({ behavior: 'smooth' })}>Início</li>
+            <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer' onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })}>Especialidades</li>
             <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer' onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })}>Nossos Projetos</li>
             <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer'>Sobre a FRG</li>
             <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer'>Contato</li>
           </ul>
-        </div>
+        </div>*/}
       </div>
-      <div id='hero-section' className='flex flex-col justify-center h-[80vh] sm:h-screen bg-white bg-top md:bg-top md:bg-hero bg-hero-mobile top-10'>
-        <div className='mx-8 text-left md:text-center md:relative bottom-7'>
+      <div id='hero-section' className='bg-center flex flex-col justify-center h-[80vh] sm:h-screen bg-white md:bg-hero bg-hero-mobile top-10'>
+        <div className='px-8 pb-8 text-left md:text-center md:relative bottom-7 bg-[#00000069]'>
           <h1 className='mt-8 mb-4 text-5xl text-white !opacity-1 font-bold'>Efeito cimento queimado</h1>
           <p className='mb-4 text-2xl text-white'>O Efeito decorativo que vai <b>transformar</b> o seu lar.</p>
           <div>
-            <button onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>CONHEÇA NOSSOS PROJETOS</button>
+            <button onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-600 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>CONHEÇA NOSSOS PROJETOS</button>
           </div>
         </div>
       </div>
       <div id='antes-e-depois' className='bg-white md:flex'>
-        <div className='self-center max-w-4xl p-8 md:px-12'>
-          <h2 className='text-4xl font-bold'>TRANSFORME O SEU AMBIENTE</h2>
+        <div className='self-center max-w-4xl p-8 md:px-12 sm:relative sm:bottom-20'>
+          <h2 className='text-4xl font-bold sm:text-5xl'>Transforme o seu Ambiente</h2>
           <p className='mt-4 text-2xl font-light'>O efeito cimento queimado transforma um ambiente sem graça em um lugar <b>aconchegante e moderno.</b></p>
           <p className='mt-4 text-2xl'><b>Arraste a foto</b> e veja o antes e o depois de um dos nossos projetos.</p>
           <div className='mt-12'>
@@ -131,11 +198,11 @@ export default function Home({ mapsApiKey }) {
             </button>
           </div>
         </div>
-        <div className='self-center mx-2 rounded-md'>
+        <div className='self-center mx-2 rounded-md sm:mx-0'>
           {
             <ReactCompareSlider
               position={43}
-              className='md:max-w-[35vw] mx-2 sm:my-20 my-10 rounded-lg'
+              className='md:max-w-[38vw] mx-2 sm:my-20 sm:mx-0 my-10 rounded-lg'
               itemOne={<ReactCompareSliderImage src="/antes.webp" alt="Image one" />}
               itemTwo={<ReactCompareSliderImage src="/depois.webp" alt="Image two" />}
             />
@@ -148,28 +215,37 @@ export default function Home({ mapsApiKey }) {
         </h3>
         <Gallery images={images} rowHeight={400} />
       </div>
-      <h3 className='px-4 mt-20 text-4xl font-bold text-center text-black mb-14 sm:text-5xl'>
-        O que os nossos clientes dizem
-      </h3>
-      <Carousel
-        showThumbs={false}
-        autoPlay
-        className='max-w-md mx-8 !mb-12 rounded-md sm:max-w-xl sm:m-auto bg-white-400'
-        infiniteLoop
-        stopOnHover
-        showArrows={false}
-        interval={5000}
-      >
-        <CarouselItem
-          author="Dora Pavão"
-          text="Pedro é muito profissional e seu serviço é impecável: rápido, limpo e perfeito. O contratei 2 vezes para consertar serviços que outro pintor (que dizia saber fazer cimento queimado) fez e que não ficaram como eu queria.
+      <div className='text-center'>
+        <h3 className='px-4 mt-20 text-4xl font-bold text-center text-black mb-14 sm:text-5xl'>
+          O que os nossos clientes dizem
+        </h3>
+        <Carousel
+          statusFormatter={(current, total) => <span className='text-lg font-semibold text-black'>{current} de {total}</span>}
+          showThumbs={false}
+          autoPlay
+          className='max-w-md mx-8 !mb-12 rounded-md sm:max-w-xl sm:m-auto bg-white-400'
+          infiniteLoop
+          stopOnHover
+          showArrows={false}
+          interval={5000}
+        >
+          <CarouselItem
+            author="Dora Pavão"
+            reviewLink="https://goo.gl/maps/YF1dH9LHdR1YcMxi9"
+            text="Pedro é muito profissional e seu serviço é impecável: rápido, limpo e perfeito. O contratei 2 vezes para consertar serviços que outro pintor (que dizia saber fazer cimento queimado) fez e que não ficaram como eu queria.
             Ele consegue deixar exatamente como o cliente deseja: com o efeito mais marcado ou mais esfumado e delicado.
             Super indico!"
         />
-        <CarouselItem author="Gabriela Schein" text="Empresa ágil, atenciosa e cordial no atendimento. Tive um rápido retorno de orçamento e execução da pintura. Pratica um valor de acordo com o mercado. O Pedro é um profissional cuidadoso e muito detalhista, além de muito disposto. Agradeço de coração a execução da minha parede de cimento queimado, ficou maravilhosa, exatamente como eu queria." />
-        <CarouselItem author="Aislan" text="Realizei a pintura do meu apartamento com a FRG e tive uma ótima experiência! Foram muito profissionais desde o primeiro atendimento, para elaboração do orçamento, até a finalização do trabalho! Recomendo!" />
-        <CarouselItem author="Marcus Vinícius" text="Super indico! Profissional qualificado, com preço justo, pontualidade no prazo e um trabalho impecável, desde o orçamento até a finalização da obra. Por mais profissionais assim." />
+          <CarouselItem className={inter.className} reviewLink="https://goo.gl/maps/eHDQjKAARJy88VgF8" author="Gabriela Schein" text="Empresa ágil, atenciosa e cordial no atendimento. Tive um rápido retorno de orçamento e execução da pintura. Pratica um valor de acordo com o mercado. O Pedro é um profissional cuidadoso e muito detalhista, além de muito disposto. Agradeço de coração a execução da minha parede de cimento queimado, ficou maravilhosa, exatamente como eu queria." />
+          <CarouselItem reviewLink="https://goo.gl/maps/9YEt4vyQ9umkWDxE8" author="Aislan" text="Realizei a pintura do meu apartamento com a FRG e tive uma ótima experiência! Foram muito profissionais desde o primeiro atendimento, para elaboração do orçamento, até a finalização do trabalho! Recomendo!" />
+          <CarouselItem reviewLink="https://goo.gl/maps/fdKs53FhZp7ZbSHj9" author="Marcus Vinícius" text="Super indico! Profissional qualificado, com preço justo, pontualidade no prazo e um trabalho impecável, desde o orçamento até a finalização da obra. Por mais profissionais assim." />
       </Carousel>
+        <button
+          className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
+          onClick={() => window.open("https://www.google.com/search?q=FRG+Pinturas+e+Decora%C3%A7%C3%B5es&rlz=1C5CHFA_enCL1032CL1032&sxsrf=AJOqlzXIa50dR8YG12i7GJ6_M0ATiXTWkw%3A1674903412513&ei=dP_UY63_Hvrn1sQPs-qI6AU&ved=0ahUKEwitib63jer8AhX6s5UCHTM1Al0Q4dUDCA8&uact=5&oq=FRG+Pinturas+e+Decora%C3%A7%C3%B5es&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoHCCMQsAMQJ0oECEEYAUoECEYYAFD7A1j7A2D1CGgDcAB4AIABnAGIAZwBkgEDMC4xmAEAoAECoAEByAEBwAEB&sclient=gws-wiz-serp#lrd=0x646ac6242881575d:0xd332597cdb14f1f5,1,,,,", "_blank")}>
+            Veja Todas as Nossas Avaliações
+        </button>
+      </div>
       <div className='flex flex-col sm:justify-between sm:flex-row sm:m-28'>
         <div className='flex flex-col self-center mx-6 my-12 sm:relative sm:max-w-2xl sm:bottom-20'>
           <h2 className='mb-2 text-4xl font-bold sm:text-5xl'>Acompanhe o nosso trabalho</h2>
@@ -189,10 +265,12 @@ export default function Home({ mapsApiKey }) {
           <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" width={500} height={740} captioned />
         </div>
       </div>
-      <div className='h-screen'>
-        <MyMapComponent mapsApiKey={mapsApiKey} />
+      <h3 className='px-2 mt-20 text-4xl font-bold text-center text-black mb-14 sm:text-5xl'>
+        Onde estamos localizados
+      </h3>
+      <div id='mapwrapper' className='sm:mb-20'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13817.183277125887!2d-51.2300568!3d-30.02837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd332597cdb14f1f5!2sFRG%20Pinturas%20e%20Decora%C3%A7%C3%B5es!5e0!3m2!1sen!2sbr!4v1674849156551!5m2!1sen!2sbr" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      {/* <Map location={location} zoomLevel={17}/> */}
       <div className='flex pt-8 text-center bg-black'>
         <div className='flex flex-col justify-center w-full'>
           <div className='flex flex-col items-center self-center'>
@@ -249,13 +327,15 @@ export default function Home({ mapsApiKey }) {
   )
 }
 
-const CarouselItem = ({ text, author }) => {
+const CarouselItem = ({ text, author, reviewLink, className }) => {
   return (
-    <div className='min-h-[530px] sm:min-h-[450px]'>
-      <div className='px-8 pt-8 pb-12 text-lg font-light sm:text-2xl sm:text-center'>
+    <div className={'flex flex-col min-h-[530px] sm:min-h-[425px] justify-center items-center font-sans' + className}>
+      <div className='px-8 pb-8 text-lg font-light sm:text-2xl sm:text-center'>
         &quot;{text}&quot;
       </div>
-      <p className='text-xl'>- {author}</p>
+      <div className='flex'>
+      <Link className='text-xl' href={reviewLink}>- {author}</Link>
+      </div>
     </div>
   )
 }
@@ -311,7 +391,7 @@ function MyMapComponent({ mapsApiKey }) {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={10}
+      zoom={17}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
@@ -319,4 +399,45 @@ function MyMapComponent({ mapsApiKey }) {
       <></>
     </GoogleMap>
   ) : <></>
+}
+
+const Navbar = () => {
+  return (
+    <nav className='self-center'>
+      <ul className="menus">
+        {menuItems.map((menu, index) => {
+          return <MenuItems items={menu} key={index} />;
+        })}
+      </ul>
+    </nav>
+  );
+};
+
+const Dropdown = ({ submenus }) => {
+  return (
+    <ul className="dropdown">
+      {submenus.map((submenu, index) => (
+        <li key={index} className="menu-items">
+          <a href={submenu.url}>{submenu.title}</a>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+const MenuItems = ({ items }) => {
+  return (
+    <li className="menu-items">
+      {items.submenu ? (
+        <>
+          <button type="button" aria-haspopup="menu" className='justify-center !text-lg font-semibold'>
+            {items.title}{' '}
+          </button>
+          <Dropdown submenus={items.submenu} />
+        </>
+      ) : (
+        <a href={items.url}>{items.title}</a>
+      )}
+    </li>
+  );
 }
