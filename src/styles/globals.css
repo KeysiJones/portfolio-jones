@@ -614,11 +614,14 @@ header {
   display: flex;
   align-items: center;
   color: inherit;
-  font-size: inherit;
   border: none;
   background-color: transparent;
   cursor: pointer;
   width: 100%;
+}
+
+li.menu-items a {
+  font-size: 1.125rem;
 }
 
 button span {
@@ -693,23 +696,23 @@ li.menu-items:hover ul.dropdown {
 
 //Instagram Embeded CSS
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 1024px) {
   div.rsme-embed {
     width: 30vw !important;
-    height: 79vh !important;
+    max-height: 79vh !important;
     border-bottom: .2px solid gray;
   }
 }
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 1024px) {
   div.rsme-instagram-embed {
     width: 30vw !important;
-    height: 79vh !important;
+    max-height: 79vh !important;
     border-bottom: .2px solid gray;
   }
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1024px) {
   div.rsme-embed {
     width: 100% !important;
     height: 100% !important;
@@ -720,7 +723,29 @@ li.menu-items:hover ul.dropdown {
   }
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1024px) {
+  div.rsme-instagram-embed {
+    width: 90vw !important;
+    height: 80vh !important;
+  }
+
+  div.rsme-instagram-embed iframe {
+    border: none !important;
+  }
+}
+
+@media all and (max-width: 640px) {
+  div.rsme-embed {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  div.rsme-embed iframe {
+    border: none !important;
+  }
+}
+
+@media all and (max-width: 640px) {
   div.rsme-instagram-embed {
     width: 100% !important;
     height: 100% !important;
@@ -730,3 +755,9 @@ li.menu-items:hover ul.dropdown {
     border: none !important;
   }
 }
+
+/* Whatsapp floating button */
+  div.floating {
+    width: 4rem;
+    height: 4rem;
+  }

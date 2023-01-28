@@ -120,21 +120,7 @@ export const menuItems = [
   },
   {
     title: 'Nossos Projetos',
-    url: '/',
-    submenu: [
-      {
-        title: 'web design',
-        url: 'web-design',
-      },
-      {
-        title: 'web development',
-        url: 'web-dev',
-      },
-      {
-        title: 'SEO',
-        url: 'seo',
-      },
-    ],
+    url: '/#nossos-projetos',
   },
 ];
 
@@ -184,8 +170,8 @@ export default function Home({ mapsApiKey }) {
           </div>
         </div>
       </div>
-      <div id='antes-e-depois' className='bg-white md:flex'>
-        <div className='self-center max-w-4xl p-8 md:px-12 md:relative md:bottom-20'>
+      <div id='antes-e-depois' className='bg-white lg:flex'>
+        <div className='self-center max-w-4xl p-8 lg:px-12 lg:relative lg:bottom-20'>
           <h2 className='text-4xl font-bold sm:text-5xl'>Transforme o seu Ambiente</h2>
           <p className='mt-4 text-2xl font-light'>O efeito cimento queimado transforma um ambiente sem graça em um lugar <b>aconchegante e moderno.</b></p>
           <p className='mt-4 text-2xl'><b>Arraste a foto</b> e veja o antes e o depois de um dos nossos projetos.</p>
@@ -202,7 +188,7 @@ export default function Home({ mapsApiKey }) {
           {
             <ReactCompareSlider
               position={43}
-              className='md:max-w-[38vw] mx-2 sm:my-20 sm:mx-2 my-10 rounded-lg'
+              className='lg:max-w-[38vw] mx-2 sm:max-w-[70vh] sm:mx-auto sm:my-20 my-10'
               itemOne={<ReactCompareSliderImage src="/antes.webp" alt="Image one" />}
               itemTwo={<ReactCompareSliderImage src="/depois.webp" alt="Image two" />}
             />
@@ -215,15 +201,15 @@ export default function Home({ mapsApiKey }) {
         </h3>
         <Gallery images={images} rowHeight={400} />
       </div>
-      <div className='text-center'>
+      <div className='text-center mb-14 md:mb-28'>
         <h3 className='px-4 mt-20 text-4xl font-bold text-center text-black mb-14 sm:text-5xl'>
           O que os nossos clientes dizem
         </h3>
         <Carousel
-          statusFormatter={(current, total) => <span className='text-lg font-semibold text-black'>{current} de {total}</span>}
+          statusFormatter={(current, total) => <span className='text-lg text-black'>{current} de {total}</span>}
           showThumbs={false}
           autoPlay
-          className='max-w-md mx-8 !mb-12 rounded-md sm:max-w-xl sm:m-auto bg-white-400'
+          className='mx-8 !mb-12 rounded-md sm:max-w-xl sm:m-auto bg-white-400'
           infiniteLoop
           stopOnHover
           showArrows={false}
@@ -246,8 +232,8 @@ export default function Home({ mapsApiKey }) {
             Veja Todas as Nossas Avaliações
         </button>
       </div>
-      <div className='flex flex-col sm:justify-between md:flex-row md:m-4 lg:m-14'>
-        <div className='flex flex-col self-center mx-8 mt-12 mb-8 sm:mx-6 md:relative sm:max-w-2xl sm:bottom-20'>
+      <div className='flex flex-col sm:justify-between lg:flex-row md:m-4 lg:mx-14 lg:mt-18 lg:mb-14'>
+        <div className='flex flex-col self-center mx-8 mt-12 mb-8 sm:mx-6 lg:relative sm:max-w-2xl sm:bottom-20'>
           <h2 className='mb-2 text-4xl font-bold sm:text-5xl'>Acompanhe o nosso trabalho</h2>
           <p className='mt-4 text-2xl font-light'>Diariamente compartilhamos o nosso trabalho no Instagram.</p>
           <p className='mt-4 text-2xl font-light'><b>Siga o nosso perfil</b> para se manter atualizado e receber as nossas novidades em primeira mão.</p>
@@ -282,20 +268,13 @@ export default function Home({ mapsApiKey }) {
           <div>
             {/*<h2 className='text-4xl font-bold text-white'>Fale conosco</h2>*/}
             <div className='flex justify-center py-4 bg-black'>
-              <Image onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')}
+              {/* <Image onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')}
                 src='/insta-black.svg'
                 width={70}
                 height={70}
                 alt=''
                 className='mx-4 hover:cursor-pointer'
-              />
-              <Image onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
-                src='/whats-black.svg'
-                width={70}
-                height={70}
-                alt=''
-                className='mx-4 hover:cursor-pointer'
-              />
+              /> */}
             </div>
             <p className='mb-4 text-white'>{new Date().getFullYear()} - Todos os direitos reservados. </p>
           </div>
@@ -324,6 +303,14 @@ export default function Home({ mapsApiKey }) {
           </a>
           <p className='text-xl text-white'>(51) 991549280</p>
         </div>*/}
+      </div>
+      <div className='fixed h-4 transition-all hover:cursor-pointer bottom-5 hover:scale-125 right-4 floating'>
+        <Image
+          onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
+          src='/whats.png'
+          fill
+          alt='Whatsapp floating icon'
+        />
       </div>
     </div>
   )
@@ -432,7 +419,7 @@ const MenuItems = ({ items }) => {
     <li className="menu-items">
       {items.submenu ? (
         <>
-          <button type="button" aria-haspopup="menu" className='justify-center !text-lg font-semibold'>
+          <button type="button" aria-haspopup="menu" className='justify-center !text-lg'>
             {items.title}{' '}
           </button>
           <Dropdown submenus={items.submenu} />
