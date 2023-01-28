@@ -185,7 +185,7 @@ export default function Home({ mapsApiKey }) {
         </div>
       </div>
       <div id='antes-e-depois' className='bg-white md:flex'>
-        <div className='self-center max-w-4xl p-8 md:px-12 sm:relative sm:bottom-20'>
+        <div className='self-center max-w-4xl p-8 md:px-12 md:relative md:bottom-20'>
           <h2 className='text-4xl font-bold sm:text-5xl'>Transforme o seu Ambiente</h2>
           <p className='mt-4 text-2xl font-light'>O efeito cimento queimado transforma um ambiente sem graça em um lugar <b>aconchegante e moderno.</b></p>
           <p className='mt-4 text-2xl'><b>Arraste a foto</b> e veja o antes e o depois de um dos nossos projetos.</p>
@@ -202,14 +202,14 @@ export default function Home({ mapsApiKey }) {
           {
             <ReactCompareSlider
               position={43}
-              className='md:max-w-[38vw] mx-2 sm:my-20 sm:mx-0 my-10 rounded-lg'
+              className='md:max-w-[38vw] mx-2 sm:my-20 sm:mx-2 my-10 rounded-lg'
               itemOne={<ReactCompareSliderImage src="/antes.webp" alt="Image one" />}
               itemTwo={<ReactCompareSliderImage src="/depois.webp" alt="Image two" />}
             />
           }
         </div>
       </div>
-      <div className='text-center bg-white sm:mx-5'>
+      <div className='text-center bg-white sm:mx-3'>
         <h3 id='nossos-projetos' className='px-2 py-20 text-4xl font-bold text-black sm:text-5xl'>
           Sonhos Já Realizados
         </h3>
@@ -246,8 +246,8 @@ export default function Home({ mapsApiKey }) {
             Veja Todas as Nossas Avaliações
         </button>
       </div>
-      <div className='flex flex-col sm:justify-between sm:flex-row sm:m-28'>
-        <div className='flex flex-col self-center mx-6 my-12 sm:relative sm:max-w-2xl sm:bottom-20'>
+      <div className='flex flex-col sm:justify-between md:flex-row md:m-4 lg:m-14'>
+        <div className='flex flex-col self-center mx-8 mt-12 mb-8 sm:mx-6 md:relative sm:max-w-2xl sm:bottom-20'>
           <h2 className='mb-2 text-4xl font-bold sm:text-5xl'>Acompanhe o nosso trabalho</h2>
           <p className='mt-4 text-2xl font-light'>Diariamente compartilhamos o nosso trabalho no Instagram.</p>
           <p className='mt-4 text-2xl font-light'><b>Siga o nosso perfil</b> para se manter atualizado e receber as nossas novidades em primeira mão.</p>
@@ -265,11 +265,12 @@ export default function Home({ mapsApiKey }) {
           <InstagramEmbed url="https://www.instagram.com/p/CnzDaTcObrk/" captioned linkText='Ver no Instagram' placeholderSpinnerDisabled placeholderProps={{imageUrl: "https://frgpinturas.vercel.app/banheiro.webp"}}/>
         </div>
       </div>
-      <h3 className='px-2 mt-20 text-4xl font-bold text-center text-black mb-14 sm:text-5xl'>
+      <h3 className='px-2 mt-8 text-4xl font-bold text-center text-black mb-14 sm:text-5xl'>
         Onde estamos localizados
       </h3>
       <div id='mapwrapper' className='sm:mb-20'>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13817.183277125887!2d-51.2300568!3d-30.02837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd332597cdb14f1f5!2sFRG%20Pinturas%20e%20Decora%C3%A7%C3%B5es!5e0!3m2!1sen!2sbr!4v1674849156551!5m2!1sen!2sbr" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe className="big-screens" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d863.5733681285091!2d-51.23035452580404!3d-30.028437343684004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd332597cdb14f1f5!2sFRG%20Pinturas%20e%20Decora%C3%A7%C3%B5es!5e0!3m2!1sen!2sbr!4v1674924152054!5m2!1sen!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe className="small-screens" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1727.1467362570181!2d-51.23090169640286!3d-30.028437343684004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd332597cdb14f1f5!2sFRG%20Pinturas%20e%20Decora%C3%A7%C3%B5es!5e0!3m2!1sen!2sbr!4v1674924244354!5m2!1sen!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div className='flex pt-8 text-center bg-black'>
         <div className='flex flex-col justify-center w-full'>

@@ -517,16 +517,27 @@ div#mapwrapper {
   text-align: -webkit-center;
 }
 
-div#mapwrapper > iframe {
-  width: 100vw;
-  height: 600px;
-}
-
 @media all and (min-width: 600px) {
   div#mapwrapper > iframe {
-    width: 80vw;
+    width: 90vw;
     height: 60vh;
     border-radius: 11px;
+  }
+
+  div#mapwrapper > iframe.small-screens {
+    display: none;
+  }
+}
+
+@media all and (max-width: 600px) {
+
+  div#mapwrapper > iframe {
+    width: 100vw;
+    height: 60vh;
+  }
+  
+  div#mapwrapper > iframe.big-screens {
+    display: none;
   }
 }
 
@@ -684,15 +695,17 @@ li.menu-items:hover ul.dropdown {
 
 @media all and (min-width: 900px) {
   div.rsme-embed {
-    width: 100vw !important;
-    height: 90vh !important;
+    width: 30vw !important;
+    height: 79vh !important;
+    border-bottom: .2px solid gray;
   }
 }
 
 @media all and (min-width: 900px) {
   div.rsme-instagram-embed {
     width: 30vw !important;
-    height: 90vh !important;
+    height: 79vh !important;
+    border-bottom: .2px solid gray;
   }
 }
 
