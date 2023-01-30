@@ -1,34 +1,11 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-// import styles from '@/styles/Home.module.css'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
-// import gmailIcon from '../../public/gmail.svg'
-// import phoneIcon from '../../public/phone.svg'
 import { Gallery } from "react-grid-gallery";
 import { InstagramEmbed } from 'react-social-media-embed';
 import { Carousel } from 'react-responsive-carousel';
-//import GoogleMapReact from 'google-map-react'
-//import { Icon } from '@iconify/react'
-//import locationIcon from '@iconify/icons-mdi/map-marker'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-import { useCallback, useState } from 'react';
 import { Sidebar } from '@/components/Sidebar';
 import Link from 'next/link';
-
-export async function getStaticProps() {
-  return { props: { mapsApiKey: process.env.REACT_MAPS_API_KEY } }
-}
-
-const containerStyle = {
-  width: '800px',
-  height: '400px',
-  margin: 'auto',
-};
-
-const center = {
-  lat: -30.02837,
-  lng: -51.2322455,
-};
 
 const inter = Inter({ subsets: ['latin'] })
 const images = [
@@ -46,12 +23,6 @@ const images = [
     src: "/banheiro.webp",
     width: 1000,
     height: 1000,
-    /*tags: [
-     { value: "Cimento Queimado", title: "Cimento Queimado  " },
-     { value: "Banheiro", title: "Banheiro" },
-  ],*/
-    //isSelected: true,
-    //caption: "After Rain (Jeshu John - designerspics.com)",
   },
   {
     src: "/wide-living.webp",
@@ -74,12 +45,6 @@ const images = [
     height: 212,
   },
 ];
-
-// const location = {
-//   address: 'R. Siqueira Campos, 1171 - Centro Histórico, Porto Alegre - RS, 90010-001',
-//   lat: -30.02837,
-//   lng: -51.2322455,
-// } // our location object from earlier
 
 export const menuItems = [
   {
@@ -122,45 +87,16 @@ export const menuItems = [
     title: 'Nossos Projetos',
     url: '/#nossos-projetos',
   },
+  {
+    title: 'Sobre a FRG',
+    url: '/#nossos-projetos',
+  },
 ];
 
-export default function Home({ mapsApiKey }) {
-
-  // const instagramProps = {
-  //   url: "https://www.instagram.com/p/Cmguz-Iu8QO/",
-  //   captioned: true,
-  //   width: 500,
-  //   height: 720
-  // }
+export default function Home() {
 
   return (
     <div className={'h-[92vh] text-black bg-white transition-all ' + inter.className}>
-      <div className='fixed z-10 flex justify-between w-full px-4 py-1 bg-white shadow-md sm:py-2'>
-        <div className='flex items-center self-center'>
-          <Image src='/logo.jpg' alt='' width={60} height={60} className='transition-all hover:cursor-pointer rounded-full !opacity-1 hover:scale-110' onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} />
-          <p className='relative sm:text-xl font-extrabold text-[#49473a] top-[.65rem]'>PINTURAS E DECORAÇÕES</p>
-        </div>
-        <Sidebar right className="sidebar-menu" />
-        <Navbar />
-        {/*<div className='mr-8 desktop-menu'>
-          <ul className={'flex items-center h-full !opacity-1'}>
-            <li className='p-2'>
-              <span>Pinturas</span>
-              <div>
-                <Link href="/">Pinturas externas</Link>
-              </div>
-            </li>
-            <div className='p-2'>Efeitos Decorativos</div>
-            <div className='p-2'>Projetos</div>
-            <div className='p-2'>Sobre a FRG</div>
-            {/*<li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer' onClick={() => document.getElementById("hero-section").scrollIntoView({ behavior: 'smooth' })}>Início</li>
-            <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer' onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })}>Especialidades</li>
-            <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer' onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })}>Nossos Projetos</li>
-            <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer'>Sobre a FRG</li>
-            <li className='mx-2 transition-all hover:scale-110 hover:cursor-pointer'>Contato</li>
-          </ul>
-        </div>*/}
-      </div>
       <div id='hero-section' className='bg-center flex flex-col justify-center h-[80vh] sm:h-screen bg-white md:bg-hero bg-hero-mobile top-10'>
         <div className='px-8 pb-8 text-left md:text-center md:relative bottom-7 bg-[#00000069]'>
           <h1 className='mt-8 mb-4 text-5xl lg:text-6xl text-white !opacity-1 font-bold'>Efeito cimento queimado</h1>
@@ -295,7 +231,6 @@ export default function Home({ mapsApiKey }) {
         <div className='flex flex-col justify-center w-full'>
           <h2 className='mx-4 text-4xl font-bold text-white'>CONTATO</h2>
           <div className='flex flex-col items-start self-center mx-4 mt-4 sm:items-center md:flex-row'>
-            {/*<Image src='/logo.jpg' alt='' width={70} height={70} className='ml-4 transition-all border-2 border-black hover:cursor-pointer rounded-full !opacity-1 hover:scale-110' onClick={() => window.open('https://www.instagram.com/frgpinturas/', '_blank')} />*/}
             <div className='flex items-center my-1'>
               <Image src="/email-logo.png" alt='email logo' width={50} height={50}/>
               <a href="mailto:pedrofragaprofissional@gmail.com" className='mx-4 text-white text-md sm:text-xl'>pedrofragaprofissional@gmail.com</a>
@@ -309,30 +244,6 @@ export default function Home({ mapsApiKey }) {
             <p className='my-4 text-white'>&copy; {new Date().getFullYear()} - FRG PINTURAS E DECORAÇÕES</p>
           </div>
         </div>
-        {/*<div className='flex justify-center mt-2'>
-          <a href="mailto:frgpinturas@gmail.com">
-            <Image
-              src={gmailIcon}
-              width={28}
-              height={28}
-              alt=''
-              className='mx-4 hover:cursor-pointer'
-            />
-          </a>
-          <p className='text-xl text-white'>frgpinturas@gmail.com</p>
-        </div>*/}
-        {/*<div className='flex justify-center mt-2'>
-          <a href="tel:123-456-7890">
-          <Image
-              src={phoneIcon}
-              width={28}
-              height={28}
-              alt=''
-              className='mx-4 hover:cursor-pointer'
-            />
-          </a>
-          <p className='text-xl text-white'>(51) 991549280</p>
-        </div>*/}
       </div>
       <div className='fixed transition-all hover:cursor-pointer bottom-5 hover:scale-125 right-4 floating'>
         <Image
@@ -359,68 +270,7 @@ const CarouselItem = ({ text, author, reviewLink, className }) => {
   )
 }
 
-// const Map = ({ location, zoomLevel, mapsApiKey }) => (
-//   <div className="map">
-//     <h2 className="map-h2">Come Visit Us At Our Campus</h2>
-
-//     <div className="google-map">
-//       <GoogleMapReact
-//         bootstrapURLKeys={{ key: mapsApiKey }}
-//         defaultCenter={location}
-//         defaultZoom={zoomLevel}
-//       >
-//         <LocationPin
-//           lat={location.lat}
-//           lng={location.lng}
-//           text={location.address}
-//         />
-//       </GoogleMapReact>
-//     </div>
-//   </div>
-// )
-
-// const LocationPin = ({ text }) => (
-//   <div className="pin">
-//     <Icon icon={locationIcon} className="pin-icon" />
-//     <p className="pin-text">{text}</p>
-//   </div>
-// )
-
-function MyMapComponent({ mapsApiKey }) {
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: mapsApiKey
-  })
-
-  const [map, setMap] = useState(null)
-
-  const onLoad = useCallback(function callback(map) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
-
-    setMap(map)
-  }, [])
-
-  const onUnmount = useCallback(function callback(map) {
-    setMap(null)
-  }, [])
-
-  return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={17}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
-      { /* Child components, such as markers, info windows, etc. */}
-      <></>
-    </GoogleMap>
-  ) : <></>
-}
-
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <nav className='self-center'>
       <ul className="menus">
