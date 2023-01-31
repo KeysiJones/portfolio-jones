@@ -4,8 +4,8 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import { Gallery } from "react-grid-gallery";
 import { InstagramEmbed } from 'react-social-media-embed';
 import { Carousel } from 'react-responsive-carousel';
-import { Sidebar } from '@/components/Sidebar';
 import Link from 'next/link';
+import { Header } from './_document';
 
 const inter = Inter({ subsets: ['latin'] })
 const images = [
@@ -97,6 +97,7 @@ export default function Home() {
 
   return (
     <div className={'h-[92vh] text-black bg-white transition-all ' + inter.className}>
+      <Header />
       <div id='hero-section' className='bg-center flex flex-col justify-center h-[80vh] sm:h-screen bg-white md:bg-hero bg-hero-mobile top-10'>
         <div className='px-8 pb-8 text-left md:text-center md:relative bottom-7 bg-[#00000069]'>
           <h1 className='mt-8 mb-4 text-5xl lg:text-6xl text-white !opacity-1 font-bold'>Efeito cimento queimado</h1>
