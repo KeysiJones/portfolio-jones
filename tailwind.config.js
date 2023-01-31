@@ -11,7 +11,11 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero': "url('/hero-wide.png')",
-        'hero-mobile': "url('/new-hero.jpg')"
+        'hero-mobile': "url('/new-hero.jpg')",
+        'about-hero': "url('/pergolado-deck-madeira.jpg')",
+        'about-hero-mobile': "url('/sala-cimento-queimado.webp')",
+        'cimento-queimado-hero': "url('/hero-1.webp')",
+        'cimento-queimado-mobile-hero': "url('/banheiro.webp')"
       },
     },
   },

@@ -586,7 +586,6 @@ header {
 .menus {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -599,7 +598,6 @@ header {
 .menu-items {
   position: relative;
   font-size: 14px;
-  min-width: 10rem;
 }
 
 .menu-items a {

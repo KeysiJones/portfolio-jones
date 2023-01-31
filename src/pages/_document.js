@@ -9,7 +9,6 @@ export default function Document() {
       <Head />
       <title>FRG PINTURAS - ESPECIALISTA EM CIMENTO QUEIMADO</title>
       <body style={{backgroundColor: "white"}}>
-        {/* <Header /> */}
         <Main />
         <NextScript />
       </body>

@@ -6,6 +6,7 @@ import { InstagramEmbed } from 'react-social-media-embed';
 import { Carousel } from 'react-responsive-carousel';
 import Link from 'next/link';
 import { Header } from './_document';
+import { Footer } from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 const images = [
@@ -48,6 +49,10 @@ const images = [
 
 export const menuItems = [
   {
+    title: 'Inicio',
+    url: '/',
+  },
+  {
     title: 'Pinturas',
     url: '/',
     submenu: [
@@ -71,11 +76,11 @@ export const menuItems = [
     submenu: [
       {
         title: 'Efeito Cimento Queimado',
-        url: 'web-design',
+        url: '/cimento-queimado',
       },
       {
         title: 'Quartzo Mica',
-        url: 'web-dev',
+        url: '/quartzo-mica',
       },
       {
         title: 'Marmorização Realista',
@@ -89,7 +94,7 @@ export const menuItems = [
   },
   {
     title: 'Sobre a FRG',
-    url: '/#nossos-projetos',
+    url: '/sobre',
   },
 ];
 
@@ -134,7 +139,7 @@ export default function Home() {
       </div>
       <div className='relative flex flex-col items-center justify-center w-full p-4 bg-white lg:h-[90vh]'>
         <h2 className='my-20 text-4xl font-bold text-center sm:text-5xl'>Nossos Parceiros</h2>
-        <div className='flex flex-col lg:flex-row'>
+        <div className='flex flex-col lg:mx-8 lg:flex-row'>
           <div className='flex'>
             <div className='parcerias'>
               <Image src="/decor-colors-logo.png" width={250} height={250} alt='logo Decor Colors' />
@@ -228,24 +233,7 @@ export default function Home() {
         <iframe className="big-screens" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d863.5733681285091!2d-51.23035452580404!3d-30.028437343684004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd332597cdb14f1f5!2sFRG%20Pinturas%20e%20Decora%C3%A7%C3%B5es!5e0!3m2!1sen!2sbr!4v1674924152054!5m2!1sen!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <iframe className="small-screens" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1727.1467362570181!2d-51.23090169640286!3d-30.028437343684004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd332597cdb14f1f5!2sFRG%20Pinturas%20e%20Decora%C3%A7%C3%B5es!5e0!3m2!1sen!2sbr!4v1674924244354!5m2!1sen!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <div className='flex pt-8 text-center bg-black'>
-        <div className='flex flex-col justify-center w-full'>
-          <h2 className='mx-4 text-4xl font-bold text-white'>CONTATO</h2>
-          <div className='flex flex-col items-start self-center mx-4 mt-4 sm:items-center md:flex-row'>
-            <div className='flex items-center my-1'>
-              <Image src="/white-envelope.png" alt='email logo' width={50} height={50}/>
-              <a href="mailto:pedrofragaprofissional@gmail.com" className='mx-4 text-white text-md sm:text-xl'>pedrofragaprofissional@gmail.com</a>
-            </div>
-            <div className='flex items-center my-1'>
-              <Image src="/white-phone.png" alt='email logo' width={50} height={50}/>
-              <a href="tel:+5551991549280" className='mx-4 text-white text-md sm:text-xl'>Telefone: (51) 9154-9280</a>
-            </div>
-          </div>
-          <div>
-            <p className='my-4 text-white'>&copy; {new Date().getFullYear()} - FRG PINTURAS E DECORAÇÕES</p>
-          </div>
-        </div>
-      </div>
+      <Footer />
       <div className='fixed transition-all hover:cursor-pointer bottom-5 hover:scale-125 right-4 floating'>
         <Image
           onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
