@@ -1,12 +1,6 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
-import { Gallery } from "react-grid-gallery";
-import { InstagramEmbed } from 'react-social-media-embed';
-import { Carousel } from 'react-responsive-carousel';
 import Link from 'next/link';
-import { Header } from './_document';
-import { Footer } from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 const images = [
