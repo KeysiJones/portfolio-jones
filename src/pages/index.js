@@ -102,42 +102,45 @@ export default function Home() {
 
   return (
     <div className={'h-[92vh] text-black bg-white transition-all ' + inter.className}>
-      <Header />
-      <div id='hero-section' className='bg-center flex flex-col justify-center h-[80vh] sm:h-screen bg-white md:bg-hero bg-hero-mobile top-10'>
-        <div className='px-8 pb-8 text-left md:text-center md:relative bottom-7 bg-[#00000069]'>
-          <h1 className='mt-8 mb-4 text-5xl lg:text-6xl text-white !opacity-1 font-bold'>Efeito cimento queimado</h1>
-          <p className='mb-4 text-2xl text-white lg:text-3xl'>O Efeito decorativo que vai <b>transformar</b> o seu lar.</p>
+      {/*<Header />*/}
+      <div id='hero-section' className='flex flex-col justify-center h-[80vh] sm:h-screen bg-white bg-hero bg-top md:bg-left top-10'>
+        <div className='px-8 pb-8 text-left md:text-center md:relative bottom-12 bg-[#00000069]'>
+          <h1 className='mt-8 mb-4 text-5xl lg:text-6xl text-white !opacity-1 font-bold'>Jones Fernandes</h1>
+          <p className='mb-4 text-2xl text-white lg:text-3xl'>Desenvolvedor de Software especializado em web</p>
           <div>
-            <button onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-600 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>CONHEÇA NOSSOS PROJETOS</button>
+            <button onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-600 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>VER PROJETOS</button>
           </div>
         </div>
       </div>
-      <div id='antes-e-depois' className='bg-white lg:flex'>
-        <div className='self-center max-w-4xl p-8 lg:px-12 lg:relative lg:bottom-20'>
-          <h2 className='text-4xl font-bold sm:text-5xl'>Transforme o seu Ambiente</h2>
-          <p className='mt-4 text-2xl font-light'>O efeito cimento queimado transforma um ambiente sem graça em um lugar <b>aconchegante e moderno.</b></p>
-          <p className='mt-4 text-2xl'><b>Arraste a foto</b> e veja o antes e o depois de um dos nossos projetos.</p>
-          <div className='mt-12'>
+      <div id='antes-e-depois' className='justify-center bg-white pt-28 lg:flex'>
+        <div className='max-w-3xl p-8 m-auto lg:px-12'>
+          <h2 className='text-4xl font-bold sm:text-5xl'>Sobre mim</h2>
+          <p className='mt-4 text-2xl font-light'>Sou um profissional com 3 anos de experiência em desenvolvimento de software para a web.</p>
+          <p className='mt-4 text-2xl font-light'>Falo 3 idiomas: Português, Inglês e Espanhol.</p>
+          <p className='mt-4 text-2xl font-light'>Gosto de aprender coisas novas e aprendo muito rápido.</p>
+          <p className='mt-4 text-2xl font-light'>Minha missão é te ajudar a tirar o teu projeto do papel e alavancar as tuas vendas, te entregando um produto de software de qualidade.</p>
+          <div className='mt-12 [display:none] lg:block m-auto'>
             <button
-              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551991549280&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Or%C3%A7amento+Gratuito%21&type=phone_number&app_absent=0bit.ly/whatsapp-frgpinturas', '_blank')}
+              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
               className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
             >
-              SOLICITAR ORÇAMENTO GRATUITO
+              ENTRAR EM CONTATO
             </button>
           </div>
         </div>
-        <div className='self-center mx-2 rounded-md sm:mx-0'>
-          {
-            <ReactCompareSlider
-              position={43}
-              className='lg:max-w-[38vw] mx-2 sm:max-w-[70vh] sm:mx-auto sm:my-20 my-10'
-              itemOne={<ReactCompareSliderImage src="/antes.webp" alt="Image one" />}
-              itemTwo={<ReactCompareSliderImage src="/depois.webp" alt="Image two" />}
-            />
-          }
+        <div className='self-center max-w-md m-auto rounded-md'>
+          {<Image alt='' src="/jones-cut.jpeg" width={400} height={400} className="rounded-full" />}
         </div>
+        <div className='mt-12 lg:[display:none;] m-auto'>
+            <button
+              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
+              className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
+            >
+              ENTRAR EM CONTATO
+            </button>
+          </div>
       </div>
-      <div className='relative flex flex-col items-center justify-center w-full p-4 bg-white lg:h-[90vh]'>
+      {/*<div className='relative flex flex-col items-center justify-center w-full p-4 bg-white lg:h-[90vh]'>
         <h2 className='my-20 text-4xl font-bold text-center sm:text-5xl'>Nossos Parceiros</h2>
         <div className='flex flex-col lg:mx-8 lg:flex-row'>
           <div className='flex'>
@@ -241,7 +244,7 @@ export default function Home() {
           fill
           alt='Whatsapp floating icon'
         />
-      </div>
+      </div>*/}
     </div>
   )
 }
