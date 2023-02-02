@@ -1,13 +1,12 @@
 import { Sidebar } from '@/components/Sidebar'
 import { Html, Head, Main, NextScript } from 'next/document'
-import Image from 'next/image'
 import { Navbar } from '.'
 
 export default function Document() {
   return (
     <Html lang="pt-br">
       <Head />
-      <title>FRG PINTURAS - ESPECIALISTA EM CIMENTO QUEIMADO</title>
+      <title>Jones Fernandes - Desenvolvedor De Sites</title>
       <body style={{backgroundColor: "white"}}>
         <Main />
         <NextScript />

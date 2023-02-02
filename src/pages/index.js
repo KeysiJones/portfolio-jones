@@ -97,18 +97,21 @@ export default function Home() {
   return (
     <div className={'h-[92vh] text-black bg-white transition-all ' + inter.className}>
       {/*<Header />*/}
-      <div id='hero-section' className='flex flex-col justify-center h-[80vh] sm:h-screen bg-white bg-hero bg-top md:bg-left top-10'>
-        <div className='px-8 pb-8 text-left md:text-center md:relative bottom-12 bg-[#00000069]'>
+      <div id='hero-section' className='flex flex-col justify-center h-[80vh] sm:h-screen bg-white bg-hero bg-top md:bg-right top-10'>
+        <div>
+          
+        </div>
+        {/*<div className='px-8 pb-8 text-left md:text-center md:relative bottom-12 bg-[#00000069]'>
           <h1 className='mt-8 mb-4 text-5xl lg:text-6xl text-white !opacity-1 font-bold'>Jones Fernandes</h1>
           <p className='mb-4 text-2xl text-white lg:text-3xl'>Desenvolvedor de Software especializado em web</p>
           <div>
-            <button onClick={() => document.getElementById("nossos-projetos").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-600 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>VER PROJETOS</button>
+            <button onClick={() => document.getElementById("sobre-mim").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-600 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>ENTRAR EM CONTATO</button>
           </div>
-        </div>
+  </div>*/}
       </div>
-      <div id='antes-e-depois' className='justify-center bg-white pt-28 lg:flex'>
+      <div id='sobre-mim' className='justify-center text-white py-28 lg:flex sm:h-screen'>
         <div className='max-w-3xl p-8 m-auto lg:px-12'>
-          <h2 className='text-4xl font-bold sm:text-5xl'>Sobre mim</h2>
+          <h2 className='text-4xl font-extrabold sm:text-5xl'>Sobre mim</h2>
           <p className='mt-4 text-2xl font-light'>Sou um profissional com 3 anos de experiência em desenvolvimento de software para a web.</p>
           <p className='mt-4 text-2xl font-light'>Falo 3 idiomas: Português, Inglês e Espanhol.</p>
           <p className='mt-4 text-2xl font-light'>Gosto de aprender coisas novas e aprendo muito rápido.</p>
@@ -123,7 +126,7 @@ export default function Home() {
           </div>
         </div>
         <div className='self-center max-w-md m-auto rounded-md'>
-          {<Image alt='' src="/jones-cut.jpeg" width={400} height={400} className="rounded-full" />}
+          {<Image alt='' src="/jones-refined-2.png" width={380} height={380} className="rounded-full" />}
         </div>
         <div className='mt-12 lg:[display:none;] m-auto'>
             <button
