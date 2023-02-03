@@ -110,11 +110,10 @@ export default function Home() {
   </div>*/}
       </div>
       <div id='sobre-mim' className='justify-center text-white py-28 lg:flex sm:h-screen'>
-        <div className='max-w-3xl p-8 m-auto lg:px-12'>
+        <div className='max-w-3xl p-8 m-auto lg:px-12 lg:relative lg:bottom-10'>
           <h2 className='text-4xl font-extrabold sm:text-5xl'>Sobre mim</h2>
           <p className='mt-4 text-2xl font-light'>Sou um profissional com 3 anos de experiência em desenvolvimento de software para a web.</p>
           <p className='mt-4 text-2xl font-light'>Falo 3 idiomas: Português, Inglês e Espanhol.</p>
-          <p className='mt-4 text-2xl font-light'>Gosto de aprender coisas novas e aprendo muito rápido.</p>
           <p className='mt-4 text-2xl font-light'>Minha missão é te ajudar a tirar o teu projeto do papel e alavancar as tuas vendas, te entregando um produto de software de qualidade.</p>
           <div className='mt-12 [display:none] lg:block m-auto'>
             <button
@@ -125,8 +124,8 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className='self-center max-w-md m-auto rounded-md'>
-          {<Image alt='' src="/jones-refined-2.png" width={380} height={380} className="rounded-full" />}
+        <div className='self-center max-w-md m-auto rounded-md lg:relative lg:bottom-10'>
+          {<Image alt='' src="/jones-refined-nobg.png" width={500} height={500} className="rounded-full" />}
         </div>
         <div className='mt-12 lg:[display:none;] m-auto'>
             <button
