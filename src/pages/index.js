@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Link from 'next/link';
+import { Header } from './_document';
 
 const inter = Inter({ subsets: ['latin'] })
-const images = [
+/*const images = [
   {
     src: "/parede.webp",
     width: 220,
@@ -39,7 +40,7 @@ const images = [
     width: 200,
     height: 212,
   },
-];
+];*/
 
 export const menuItems = [
   {
@@ -95,46 +96,66 @@ export const menuItems = [
 export default function Home() {
 
   return (
-    <div className={'h-[92vh] text-black bg-white transition-all ' + inter.className}>
-      {/*<Header />*/}
-      <div id='hero-section' className='flex flex-col justify-center h-[80vh] sm:h-screen bg-white bg-hero bg-top md:bg-right top-10'>
-        <div>
-          
-        </div>
-        {/*<div className='px-8 pb-8 text-left md:text-center md:relative bottom-12 bg-[#00000069]'>
-          <h1 className='mt-8 mb-4 text-5xl lg:text-6xl text-white !opacity-1 font-bold'>Jones Fernandes</h1>
-          <p className='mb-4 text-2xl text-white lg:text-3xl'>Desenvolvedor de Software especializado em web</p>
-          <div>
-            <button onClick={() => document.getElementById("sobre-mim").scrollIntoView({ behavior: 'smooth' })} className='p-2 font-bold text-white transition-all bg-gray-600 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'>ENTRAR EM CONTATO</button>
+    <div className={'text-black bg-[#5c5ade] transition-all flex' + inter.className}>
+      <div id='hero-section' className='flex flex-col justify-center p-8 text-white lg:py-28 lg:flex sm:h-screen'>
+        <div className='flex flex-col lg:flex-row'>
+          <div className='max-w-4xl pt-8 m-auto sm:pt-0 lg:px-12'>
+            <h2 className='text-5xl font-extrabold sm:text-6xl'>Jones Fernandes</h2>
+            <p className='my-12 text-3xl font-extralight'>Oi, Eu sou o Jones, desenvolvedor web focado em criar software que gera valor para grandes empresas.</p>
+            <div className='[display:none] lg:block m-auto'>
+              <button
+                onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
+                className='p-2 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110'
+              >
+                QUERO SABER MAIS
+              </button>
+            </div>
           </div>
-  </div>*/}
+          <div className='relative self-center max-w-md m-auto rounded-md sm:block sm:left-0 left-2'>
+            <Image alt='' src="/jones-refined-white.png" width={500} height={500} className="rounded-full" />
+          </div>
+          <div className='mt-12 lg:[display:none;] text-center relative'>
+            <button
+              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
+              className='p-2 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110'
+            >
+              QUERO SABER MAIS
+            </button>
+          </div>
+        </div>
+        <div className='self-center max-w-md m-auto mt-24 rounded-md'>
+          <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-white rounded-full animate-bounce" />
+        </div>
       </div>
-      <div id='sobre-mim' className='justify-center text-white py-28 lg:flex sm:h-screen'>
-        <div className='max-w-3xl p-8 m-auto lg:px-12 lg:relative lg:bottom-10'>
-          <h2 className='text-4xl font-extrabold sm:text-5xl'>Sobre mim</h2>
-          <p className='mt-4 text-2xl font-light'>Sou um profissional com 3 anos de experiência em desenvolvimento de software para a web.</p>
-          <p className='mt-4 text-2xl font-light'>Falo 3 idiomas: Português, Inglês e Espanhol.</p>
-          <p className='mt-4 text-2xl font-light'>Minha missão é te ajudar a tirar o teu projeto do papel e alavancar as tuas vendas, te entregando um produto de software de qualidade.</p>
+      <div id='sobre-mim' className='justify-center p-8 py-12 text-white lg:py-28 lg:flex sm:h-screen'>
+        <div className='max-w-3xl m-auto lg:relative lg:bottom-14'>
+          <h2 className='text-5xl font-extrabold sm:text-6xl'>Sobre Mim</h2>
+          <p className='mt-12 text-3xl font-extralight'>Sou um profissional com 3 anos de experiência em desenvolvimento de software para a web.</p>
+          <p className='mt-8 text-3xl font-extralight'>Falo 3 idiomas: Português, Inglês e Espanhol.</p>
+          {/*<p className='mt-8 text-3xl font-extralight'>Minha missão é te ajudar a tirar o teu projeto do papel e alavancar as tuas vendas, te entregando um produto de software de qualidade.</p>*/}
           <div className='mt-12 [display:none] lg:block m-auto'>
             <button
               onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
-              className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
+              className='p-2 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110'
             >
               ENTRAR EM CONTATO
             </button>
           </div>
         </div>
-        <div className='self-center max-w-md m-auto rounded-md lg:relative lg:bottom-10'>
-          {<Image alt='' src="/jones-refined-nobg.png" width={500} height={500} className="rounded-full" />}
-        </div>
-        <div className='mt-12 lg:[display:none;] m-auto'>
-            <button
-              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
-              className='p-2 font-bold text-white transition-all bg-gray-900 rounded-md sm:px-8 sm:text-xl hover:bg-gray-500 sm:hover:scale-110'
-            >
-              ENTRAR EM CONTATO
-            </button>
+        <div className='mt-12 lg:[display:none;] text-center relative'>
+          <div className='self-center max-w-md m-auto rounded-md lg:relative lg:bottom-10'>
+            {<Image alt='' src="/laptop.png" width={400} height={400} className="relative scale-150 rounded-full sm:block left-6" />}
           </div>
+          <button
+            onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
+            className='p-2 mt-24 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110'
+          >
+            ENTRAR EM CONTATO
+          </button>
+        </div>
+        <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative lg:bottom-10'>
+          {<Image alt='' src="/laptop.png" width={400} height={400} className="relative scale-150 rounded-full sm:block left-6" />}
+        </div>
       </div>
       {/*<div className='relative flex flex-col items-center justify-center w-full p-4 bg-white lg:h-[90vh]'>
         <h2 className='my-20 text-4xl font-bold text-center sm:text-5xl'>Nossos Parceiros</h2>
