@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Link from 'next/link';
 import { Header } from './_document';
+import { Carrousel } from '@/components/Carousel';
+import { CarouselItem } from '@/components/CarouselItem';
 
 const inter = Inter({ subsets: ['latin'] })
 /*const images = [
@@ -157,6 +159,19 @@ export default function Home() {
           {<Image alt='' src="/laptop.png" width={400} height={400} className="relative scale-150 rounded-full sm:block left-6" />}
         </div>
       </div>
+      <div id='projetos' className=''>
+        <h2 className='mt-20 text-5xl font-extrabold text-center text-white sm:text-6xl'>Projetos</h2>
+        <div className='' onScroll={(e) => console.log({e})}>
+          <Carrousel>
+            <CarouselItem cardImage="/personal-blog.png" />
+            <CarouselItem cardImage="/quiz-app.jpg" />
+            <CarouselItem cardImage="/quiz-app.jpg" />
+            <CarouselItem cardImage="/quiz-app.jpg" />
+            <CarouselItem cardImage="/quiz-app.jpg" />
+            <CarouselItem cardImage="/quiz-app.jpg" />
+          </Carrousel>
+        </div>
+      </div>
       {/*<div className='relative flex flex-col items-center justify-center w-full p-4 bg-white lg:h-[90vh]'>
         <h2 className='my-20 text-4xl font-bold text-center sm:text-5xl'>Nossos Parceiros</h2>
         <div className='flex flex-col lg:mx-8 lg:flex-row'>
@@ -266,7 +281,7 @@ export default function Home() {
   )
 }
 
-const CarouselItem = ({ text, author, reviewLink, className }) => {
+/*const CarouselItem = ({ text, author, reviewLink, className }) => {
   return (
     <div className={'flex flex-col min-h-[530px] sm:min-h-[425px] justify-center items-center font-sans hover:cursor-pointer' + className}>
       <div className='px-8 pb-8 text-lg font-light sm:text-2xl sm:text-center'>
@@ -277,7 +292,7 @@ const CarouselItem = ({ text, author, reviewLink, className }) => {
       </div>
     </div>
   )
-}
+}*/
 
 export const Navbar = () => {
   return (

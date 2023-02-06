@@ -794,6 +794,10 @@ li.menu-items:hover ul.dropdown {
     background: linear-gradient(to right, #5f56dc, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
+  div.glider-track {
+    margin: 0 4rem;
+  }
+
   /*This is a great color for a dark mode #16222A*/
 
   /*linear-gradient(177deg, #fcf200 0%, #ff3b00 48%, #f7df1e 100%)*/
