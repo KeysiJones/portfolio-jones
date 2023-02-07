@@ -98,16 +98,19 @@ export const menuItems = [
 export default function Home() {
 
   return (
-    <div className={'text-black bg-[#5c5ade] transition-all flex' + inter.className}>
-      <div id='hero-section' className='flex flex-col justify-center p-8 text-white lg:py-28 lg:flex sm:h-screen'>
+    <div className={'text-black bg-[gold] transition-all flex' + inter.className}>
+      <div id='hero-section' className='flex flex-col justify-center p-8 text-[#262d3e] lg:py-28 lg:flex sm:h-screen'>
         <div className='flex flex-col lg:flex-row'>
           <div className='max-w-4xl pt-8 m-auto sm:pt-0 lg:px-12'>
+            <div className='flex'>
+              <Image src="/dev.svg" width={80} height={80} alt='dev icon' className='mb-8' />
+            </div>
             <h2 className='text-5xl font-extrabold sm:text-6xl'>Jones Fernandes</h2>
-            <p className='my-12 text-3xl font-extralight'>Oi, Eu sou o Jones, desenvolvedor web focado em criar software que gera valor para grandes empresas.</p>
+            <p className='my-12 text-3xl'>Oi, Eu sou o Jones, desenvolvedor web focado em criar software que gera valor para grandes empresas.</p>
             <div className='[display:none] lg:block m-auto'>
               <button
                 onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
-                className='p-2 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110'
+                className='p-2 font-bold text-white transition-all bg-[#262d3e] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
               >
                 QUERO SABER MAIS
               </button>
@@ -119,7 +122,7 @@ export default function Home() {
           <div className='mt-12 lg:[display:none;] text-center relative'>
             <button
               onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
-              className='p-2 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110'
+              className='p-2 font-bold text-white transition-all bg-[#262d3e] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
             >
               QUERO SABER MAIS
             </button>

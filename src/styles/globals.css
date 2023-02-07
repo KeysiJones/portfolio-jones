@@ -778,13 +778,6 @@ li.menu-items:hover ul.dropdown {
     height: 20px !important;
   }*/
 
-  div#hero-section {
-    background: #4776E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #5f56dc, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    //background: url(https://i.pinimg.com/originals/04/bb/1e/04bb1ec93c6c223aa61e1479435bb6e7.png)    
-  }
-
 
   /*Sobre Mim Section*/
 
