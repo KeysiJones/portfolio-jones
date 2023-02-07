@@ -126,7 +126,7 @@ export default function Home() {
           </div>
         </div>
         <div className='self-center max-w-md m-auto mt-24 rounded-md'>
-          <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-white rounded-full animate-bounce" />
+          <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-white rounded-full animate-bounce hover:cursor-pointer" onClick={() => document.querySelector("#sobre-mim").scrollIntoView({behavior: 'smooth'})} />
         </div>
       </div>
       <div id='sobre-mim' className='justify-center p-8 py-12 text-white lg:py-28 lg:flex sm:h-screen'>
