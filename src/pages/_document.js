@@ -6,7 +6,7 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head />
-      <meta name="theme-color" content="#5c5ade" />
+      <meta name="theme-color" content="#262d3e" />
       <title>Jones Fernandes - Desenvolvedor De Sites</title>
       <body style={{backgroundColor: "white"}}>
         <Main />
