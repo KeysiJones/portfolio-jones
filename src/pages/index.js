@@ -1,9 +1,8 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import Link from 'next/link';
-import { Header } from './_document';
 import { Carrousel } from '@/components/Carousel';
 import { CarouselItem } from '@/components/CarouselItem';
+import { FadeInWrapper } from '@/components/FadeInWrapper';
 
 const inter = Inter({ subsets: ['latin'] })
 /*const images = [
@@ -99,18 +98,35 @@ export default function Home() {
 
   return (
     <div className={'text-black bg-[gold] transition-all flex' + inter.className}>
-      <div id='hero-section' className='flex flex-col justify-center p-8 text-[#262d3e] lg:py-28 lg:flex sm:h-screen'>
-        <div className='flex flex-col lg:flex-row'>
-          <div className='max-w-4xl pt-8 m-auto sm:pt-0 lg:px-12'>
-            <div className='flex'>
-              <Image src="/dev.svg" width={80} height={80} alt='dev icon' className='mb-8' />
+      <FadeInWrapper>
+        <div id='hero-section' className='flex flex-col justify-center p-8 text-[#262d3e] lg:py-28 lg:flex'>
+          <div className='flex flex-col lg:flex-row'>
+            <div className='max-w-4xl pt-8 m-auto sm:pt-0 lg:px-12'>
+              <div className='flex'>
+                {/* <Image src="/js.svg" width={80} height={80} alt='dev icon' className='mb-8 fadeIn' /> */}
+                <Image src="/dev.svg" width={80} height={80} alt='dev icon' className='mb-1' />
+              </div>
+              <h2 className='text-5xl font-black fadeIn sm:text-6xl'>Jones Fernandes</h2>
+              <div className='my-12 text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
+                {/* <div className='flex'> */}
+                  {/* <Image src="/traffic-lights.svg" width={100} height={100} alt='dev icon' /> */}
+                  <p className='pt-2 text-gray-400 sm:[display:none;]'>README.md</p>
+                {/* </div> */}
+                <p className='p-6 text-left sm:p-0'>Oi, Eu sou o Jones, desenvolvedor web focado em criar software que gera valor para grandes empresas.</p>
+              </div>
+              <div className='[display:none] lg:block m-auto'>
+                <button
+                  onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
+                  className='p-2 font-bold text-white transition-all bg-[#262d3e] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                >
+                  QUERO SABER MAIS
+                </button>
+              </div>
             </div>
-            <h2 className='text-5xl font-black sm:text-6xl'>Jones Fernandes</h2>
-            <div className='my-12 text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
-              <p className='pt-2 text-gray-400 sm:[display:none;]'>README.md</p>
-              <p className='p-6 text-left sm:p-0'>Oi, Eu sou o Jones, desenvolvedor web focado em criar software que gera valor para grandes empresas.</p>
+            <div className='relative self-center max-w-md m-auto rounded-md sm:block sm:left-0 left-2'>
+              <Image alt='' src="/jones-refined-white.png" width={500} height={500} className="rounded-full" />
             </div>
-            <div className='[display:none] lg:block m-auto'>
+            <div className='mt-12 lg:[display:none;] text-center relative'>
               <button
                 onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
                 className='p-2 font-bold text-white transition-all bg-[#262d3e] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
@@ -119,67 +135,57 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className='relative self-center max-w-md m-auto rounded-md sm:block sm:left-0 left-2'>
-            <Image alt='' src="/jones-refined-white.png" width={500} height={500} className="rounded-full" />
-          </div>
-          <div className='mt-12 lg:[display:none;] text-center relative'>
-            <button
-              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
-              className='p-2 font-bold text-white transition-all bg-[#262d3e] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
-            >
-              QUERO SABER MAIS
-            </button>
+          <div className='self-center max-w-md m-auto mt-24 rounded-md'>
+            <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-white rounded-full hover:cursor-pointer" onClick={() => document.querySelector("#sobre-mim").scrollIntoView({ behavior: 'smooth' })} />
           </div>
         </div>
-        <div className='self-center max-w-md m-auto mt-24 rounded-md'>
-          <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-white rounded-full animate-bounce hover:cursor-pointer" onClick={() => document.querySelector("#sobre-mim").scrollIntoView({ behavior: 'smooth' })} />
-        </div>
-      </div>
-      <div id='sobre-mim' className='justify-center p-8 py-12 text-white lg:py-28 lg:flex sm:h-screen bg-[#262d3e] sm:flex-col'>
-        <div className='flex flex-col my-auto sm:flex-row'>
-          <div className='max-w-3xl m-auto lg:relative'>
-            <h2 className='text-5xl font-extrabold sm:text-6xl'>Sobre Mim</h2>
-            <p className='mt-12 text-3xl font-extralight'>Sou um profissional com 3 anos de experiência em desenvolvimento de software para a web.</p>
-            <p className='mt-8 text-3xl font-extralight'>Falo 3 idiomas: Português, Inglês e Espanhol.</p>
-            {/*<p className='mt-8 text-3xl font-extralight'>Minha missão é te ajudar a tirar o teu projeto do papel e alavancar as tuas vendas, te entregando um produto de software de qualidade.</p>*/}
-            <div className='mt-12 [display:none] lg:block m-auto'>
+      </FadeInWrapper>
+      <div id='sobre-mim' className='justify-center p-8 py-12 text-white lg:py-28 lg:flex lg:h-screen bg-[#262d3e] sm:flex-col'>
+        <FadeInWrapper>
+          <div className='flex flex-col my-auto sm:flex-row'>
+            <div className='max-w-3xl m-auto lg:relative'>
+              <h2 className='text-5xl font-extrabold sm:text-6xl'>Sobre Mim</h2>
+              <p className='mt-12 text-3xl font-extralight'>Sou um profissional com 3 anos de experiência em desenvolvimento de software para a web.</p>
+              <p className='mt-8 text-3xl font-extralight'>Falo 3 idiomas: Português, Inglês e Espanhol.</p>
+              {/*<p className='mt-8 text-3xl font-extralight'>Minha missão é te ajudar a tirar o teu projeto do papel e alavancar as tuas vendas, te entregando um produto de software de qualidade.</p>*/}
+              <div className='mt-12 [display:none] lg:block m-auto'>
+                <button
+                  onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
+                  className='p-2 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                >
+                  ENTRAR EM CONTATO
+                </button>
+              </div>
+            </div>
+            <div className='mt-12 lg:[display:none;] text-center relative'>
+              <div className='self-center max-w-md m-auto rounded-md'>
+                {<Image alt='' src="/laptop.png" width={400} height={400} className="relative scale-150 rounded-full sm:block left-6" />}
+              </div>
               <button
                 onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
-                className='p-2 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                className='p-2 mt-24 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
               >
                 ENTRAR EM CONTATO
               </button>
             </div>
-          </div>
-          <div className='mt-12 lg:[display:none;] text-center relative'>
-            <div className='self-center max-w-md m-auto rounded-md'>
+            <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative lg:bottom-10'>
               {<Image alt='' src="/laptop.png" width={400} height={400} className="relative scale-150 rounded-full sm:block left-6" />}
             </div>
-            <button
-              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5551993667706', '_blank')}
-              className='p-2 mt-24 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
-            >
-              ENTRAR EM CONTATO
-            </button>
           </div>
-          <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative lg:bottom-10'>
-            {<Image alt='' src="/laptop.png" width={400} height={400} className="relative scale-150 rounded-full sm:block left-6" />}
+          <div className='self-center max-w-md m-auto mt-24 rounded-md'>
+            <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-[gold] rounded-full hover:cursor-pointer" onClick={() => document.querySelector("#projetos").scrollIntoView({ behavior: 'smooth' })} />
           </div>
-        </div>
-        <div className='self-center max-w-md m-auto mt-24 rounded-md'>
-          <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-[gold] rounded-full animate-bounce hover:cursor-pointer" onClick={() => document.querySelector("#projetos").scrollIntoView({ behavior: 'smooth' })} />
-        </div>
+        </FadeInWrapper>
       </div>
-      <div id='projetos' className=''>
-        <h2 className='mt-20 text-5xl font-extrabold text-center text-[#262d3e] sm:text-6xl'>Projetos</h2>
+      <div id='projetos' className='lg:h-[90vh] bg-[gold]'>
+        <FadeInWrapper>
+          <h2 className='mt-20 text-5xl font-extrabold text-center text-[#262d3e] sm:text-6xl'>Projetos</h2>
           <Carrousel>
             <CarouselItem cardImage="/personal-blog.png" />
             <CarouselItem cardImage="/quiz-app.jpg" />
-            <CarouselItem cardImage="/quiz-app.jpg" />
-            <CarouselItem cardImage="/quiz-app.jpg" />
-            <CarouselItem cardImage="/quiz-app.jpg" />
-            <CarouselItem cardImage="/quiz-app.jpg" />
+            <CarouselItem cardImage="/personal-blog.png" />
           </Carrousel>
+        </FadeInWrapper>
       </div>
       {/*<div className='relative flex flex-col items-center justify-center w-full p-4 bg-white lg:h-[90vh]'>
         <h2 className='my-20 text-4xl font-bold text-center sm:text-5xl'>Nossos Parceiros</h2>
