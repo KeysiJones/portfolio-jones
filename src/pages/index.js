@@ -97,7 +97,7 @@ export const menuItems = [
 export default function Home() {
 
   return (
-    <div className={'text-black bg-[gold] transition-all flex' + inter.className}>
+    <div className={'text-black bg-white transition-all flex' + inter.className}>
       <FadeInWrapper>
         <div id='hero-section' className='flex flex-col justify-center p-8 text-[#262d3e] lg:py-28 lg:flex'>
           <div className='flex flex-col lg:flex-row'>
@@ -123,8 +123,8 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className='relative self-center max-w-md m-auto rounded-md sm:block sm:left-0 left-2'>
-              <Image alt='' src="/jones-refined-white.png" width={500} height={500} className="rounded-full" />
+            <div className='relative self-center max-w-md m-auto sm:block sm:left-0 left-2'>
+              <Image alt='' src="/jones_thinker_circular.png" width={400} height={400} />
             </div>
             <div className='mt-12 lg:[display:none;] text-center relative'>
               <button
@@ -136,7 +136,7 @@ export default function Home() {
             </div>
           </div>
           <div className='self-center max-w-md m-auto mt-24 rounded-md'>
-            <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-white rounded-full hover:cursor-pointer" onClick={() => document.querySelector("#sobre-mim").scrollIntoView({ behavior: 'smooth' })} />
+            <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-white rounded-full hover:cursor-pointer animate-bounce" onClick={() => document.querySelector("#sobre-mim").scrollIntoView({ behavior: 'smooth' })} />
           </div>
         </div>
       </FadeInWrapper>
@@ -173,17 +173,17 @@ export default function Home() {
             </div>
           </div>
           <div className='self-center max-w-md m-auto mt-24 rounded-md'>
-            <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-[gold] rounded-full hover:cursor-pointer" onClick={() => document.querySelector("#projetos").scrollIntoView({ behavior: 'smooth' })} />
+            <Image alt='' src="/arrow-down.svg" width={80} height={80} className="mx-auto bg-[gold] rounded-full hover:cursor-pointer animate-bounce" onClick={() => document.querySelector("#projetos").scrollIntoView({ behavior: 'smooth' })} />
           </div>
         </FadeInWrapper>
       </div>
-      <div id='projetos' className='lg:h-[90vh] bg-[gold]'>
+      <div id='projetos' className='lg:h-[90vh] bg-white'>
         <FadeInWrapper>
           <h2 className='mt-20 text-5xl font-extrabold text-center text-[#262d3e] sm:text-6xl'>Projetos</h2>
           <Carrousel>
-            <CarouselItem cardImage="/personal-blog.png" />
-            <CarouselItem cardImage="/quiz-app.jpg" />
-            <CarouselItem cardImage="/personal-blog.png" />
+            <CarouselItem description="Blog Pessoal" link="https://keysijones-blog.vercel.app/" cardImage="/personal-blog.png" />
+            <CarouselItem description="Site da FRG Pinturas e Decoracoes" link="https://frgpinturasedecoracoes.com/" cardImage="/frg-pinturas.png" />
+            <CarouselItem description="Jogo de quiz" link="https://keysi-quiz.vercel.app" cardImage="/quiz-app.jpg" />
           </Carrousel>
         </FadeInWrapper>
       </div>
