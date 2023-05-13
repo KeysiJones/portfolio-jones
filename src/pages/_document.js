@@ -1,4 +1,3 @@
-import { Sidebar } from '@/components/Sidebar'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -20,6 +19,5 @@ export const Header = () => (
     <div className='flex items-center self-center'>
       <p className='relative sm:text-xl font-extrabold text-[#49473a] left-32 '>JONES FERNANDES</p>
     </div>
-    <Sidebar right className="sidebar-menu" />
   </div>
 )
