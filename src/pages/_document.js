@@ -1,6 +1,5 @@
 import { Sidebar } from '@/components/Sidebar'
 import { Html, Head, Main, NextScript } from 'next/document'
-import { Navbar } from '.'
 
 export default function Document() {
   return (
@@ -22,6 +21,5 @@ export const Header = () => (
       <p className='relative sm:text-xl font-extrabold text-[#49473a] left-32 '>JONES FERNANDES</p>
     </div>
     <Sidebar right className="sidebar-menu" />
-    {/* <Navbar /> */}
   </div>
 )
