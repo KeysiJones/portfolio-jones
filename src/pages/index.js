@@ -133,20 +133,19 @@ export default function Home() {
             <div className='max-w-3xl px-4 m-auto lg:relative'>
               <h2 className='text-5xl font-extrabold sm:text-6xl'>Sobre Mim</h2>
               <p className='mt-12 text-3xl font-extralight'>
-                Sou um desenvolvedor de software com três anos de experiência, especializado no desenvolvimento de sites e sistemas web.
+                Sou um desenvolvedor de software com três anos de experiência, especializado em desenvolvimento web.
               </p>
               <p className='mt-8 text-3xl font-extralight'>
-                Além do trabalho, me dedico a hobbies como leitura, viagens,
-                tempo com a família, caminhadas e exercicios fisicos. Possuo habilidades
-                sólidas em HTML, CSS, JavaScript e bibliotecas como React,
-                TailwindCSS e Styled Components. Busco constantemente
-                aprimorar minhas habilidades e oferecer soluções inovadoras aos
-                meus clientes.
+               Além do trabalho, meus hobbies incluem ler, viajar, passar tempo com a família e fazer exercícios físicos. 
               </p>
               <p className='mt-8 text-3xl font-extralight'>
-                Se você procura um desenvolvedor apaixonado e comprometido,
-                eu estou pronto para enfrentar novos desafios e contribuir
-                para o sucesso do seu projeto.
+                Tenho habilidades sólidas em HTML, CSS, JavaScript e bibliotecas como React, TailwindCSS e Styled Components.
+              </p>
+              <p className='mt-8 text-3xl font-extralight'>
+                Busco constantemente aprimorar minhas habilidades e oferecer soluções inovadoras aos meus clientes. 
+              </p>
+              <p className='mt-8 text-3xl font-extralight'>
+                Se você procura um desenvolvedor comprometido e apaixonado, estou pronto para enfrentar novos desafios e contribuir para o sucesso do seu projeto.
               </p>
               <div className='mt-12 [display:none] lg:block m-auto'>
                 <button
