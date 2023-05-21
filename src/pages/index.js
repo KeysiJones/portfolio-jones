@@ -206,6 +206,7 @@ export default function Home() {
           </section>
         </FadeInWrapper>
       </div>
+      <p className='my-5 text-lg text-center'>Jones Fernandes &copy; 2019 - {new Date().getFullYear()}</p>
     </div>
   );
 }
