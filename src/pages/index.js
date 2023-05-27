@@ -13,10 +13,10 @@ export default function Home() {
       <FadeInWrapper>
         <div
           id='hero-section'
-          className='flex flex-col px-8 lg:px-0 justify-center text-[#262d3e] lg:py-28 lg:flex relative'
+          className='flex flex-col px-8 lg:px-0 justify-center text-[#262d3e] bg-[#FDD935] lg:flex relative overflow-hidden'
         >
-          <div className='flex flex-col lg:bg-[whitesmoke] lg:flex-row pt-4'>
-            <div className='max-w-4xl pt-8 m-auto sm:pt-0 lg:px-12'>
+          <div className='flex flex-col lg:flex-row'>
+            <div className='max-w-4xl m-auto pt-14 lg:px-12'>
               <div className='flex'>
                 <Image
                   src='/dev.svg'
@@ -29,11 +29,11 @@ export default function Home() {
               <h2 className='text-5xl font-black fadeIn sm:text-6xl'>
                 Jones Fernandes
               </h2>
-              <div className='my-12 text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
+              <div className='my-12 max-w-xl sm:max-w-2xl text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
                 <p className='pt-2 text-gray-400 sm:[display:none;]'>
                   README.md
                 </p>
-                <p className='p-6 font-thin text-left sm:p-0'>
+                <p className='p-6 text-left sm:p-0'>
                   Oi, Eu sou o Jones, desenvolvedor web focado em criar software
                   que gera valor para grandes empresas.
                 </p>
@@ -46,18 +46,19 @@ export default function Home() {
                       '_blank'
                     )
                   }
-                  className='p-2 font-bold text-white transition-all bg-[#262d3e] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                  className='p-2 font-bold text-white transition-all bg-[#5aa6f6] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
                 >
                   QUERO SABER MAIS
                 </button>
               </div>
             </div>
-            <div className='relative self-center max-w-md m-auto sm:block sm:left-0 left-2'>
+            <div className='relative self-center max-w-md m-auto -bottom-[157px] xl:-bottom-[120px] sm:block sm:left-0 left-2'>
               <Image
                 alt=''
                 src='/jones-cut-perfect.png'
-                width={400}
-                height={400}
+                width={600}
+                height={600}
+                className='lg:scale-125'
               />
             </div>
             <div className='mt-12 lg:[display:none;] text-center relative'>
@@ -68,7 +69,7 @@ export default function Home() {
                     '_blank'
                   )
                 }
-                className='p-2 font-bold text-white transition-all bg-[#262d3e] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                className='p-2 font-bold text-white transition-all bg-[#5aa6f6] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
               >
                 QUERO SABER MAIS
               </button>
@@ -92,10 +93,10 @@ export default function Home() {
       </FadeInWrapper>
       <div
         id='sobre-mim'
-        className='py-12 justify-center text-white lg:flex bg-[#262d3e] sm:flex-col'
+        className='justify-center px-4 py-24 text-white lg:flex bg-slate-800 sm:flex-col'
       >
         <FadeInWrapper>
-          <div className='flex flex-col my-auto sm:flex-row'>
+          <div className='flex flex-col xl:flex-row'>
             <div className='max-w-3xl px-4 m-auto lg:relative'>
               <h2 className='text-5xl font-extrabold sm:text-6xl'>Sobre Mim</h2>
               <p className='mt-12 text-3xl font-extralight'>
@@ -118,7 +119,7 @@ export default function Home() {
                       '_blank'
                     )
                   }
-                  className='p-2 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                  className='p-2 font-bold text-white transition-all bg-[#5aa6f6] rounded-md text-xl md:hover:scale-110 px-8'
                 >
                   ENTRAR EM CONTATO
                 </button>
@@ -132,7 +133,7 @@ export default function Home() {
                     src='/laptop.png'
                     width={400}
                     height={400}
-                    className='relative scale-150 rounded-full sm:block left-6'
+                    className='relative scale-150 rounded-full md:block left-6'
                   />
                 }
               </div>
@@ -143,7 +144,7 @@ export default function Home() {
                     '_blank'
                   )
                 }
-                className='p-2 mt-24 font-bold text-gray-700 transition-all bg-[#F7DE1F] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                className='p-2 mt-24 font-bold text-gray-700 transition-all bg-[#5aa6f6] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
               >
                 ENTRAR EM CONTATO
               </button>
@@ -155,7 +156,7 @@ export default function Home() {
                   src='/laptop.png'
                   width={400}
                   height={400}
-                  className='relative scale-150 rounded-full sm:block left-6'
+                  className='relative scale-150 rounded-full md:block left-6'
                 />
               }
             </div>
