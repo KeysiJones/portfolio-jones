@@ -13,9 +13,9 @@ export default function Home() {
       <FadeInWrapper>
         <div
           id='hero-section'
-          className='flex flex-col justify-center text-[#262d3e] lg:py-28 lg:flex relative'
+          className='flex flex-col px-8 lg:px-0 justify-center text-[#262d3e] lg:py-28 lg:flex relative'
         >
-          <div className='flex flex-col bg-[whitesmoke] lg:flex-row pt-4'>
+          <div className='flex flex-col lg:bg-[whitesmoke] lg:flex-row pt-4'>
             <div className='max-w-4xl pt-8 m-auto sm:pt-0 lg:px-12'>
               <div className='flex'>
                 <Image
