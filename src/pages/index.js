@@ -13,9 +13,9 @@ export default function Home() {
       <FadeInWrapper>
         <div
           id='hero-section'
-          className='flex flex-col justify-center p-8 text-[#262d3e] lg:py-28 lg:flex relative'
+          className='flex flex-col justify-center text-[#262d3e] lg:py-28 lg:flex relative'
         >
-          <div className='flex flex-col lg:flex-row'>
+          <div className='flex flex-col bg-[whitesmoke] lg:flex-row pt-4'>
             <div className='max-w-4xl pt-8 m-auto sm:pt-0 lg:px-12'>
               <div className='flex'>
                 <Image
@@ -55,10 +55,9 @@ export default function Home() {
             <div className='relative self-center max-w-md m-auto sm:block sm:left-0 left-2'>
               <Image
                 alt=''
-                src='/jones-cut-perfect.jpeg'
+                src='/jones-cut-perfect.png'
                 width={400}
                 height={400}
-                className='rounded-full'
               />
             </div>
             <div className='mt-12 lg:[display:none;] text-center relative'>
