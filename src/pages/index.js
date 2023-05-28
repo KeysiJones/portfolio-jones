@@ -96,20 +96,21 @@ export default function Home() {
         className='justify-center px-4 py-24 text-white lg:flex bg-slate-800 sm:flex-col'
       >
         <FadeInWrapper>
-          <div className='flex flex-col xl:flex-row'>
+          <div className='relative flex flex-col xl:flex-row'>
             <div className='max-w-3xl px-4 m-auto lg:relative'>
               <h2 className='text-5xl font-extrabold sm:text-6xl'>Sobre Mim</h2>
               <p className='mt-12 text-3xl font-extralight'>
-                Sou um desenvolvedor de software com três anos de experiência, especializado em desenvolvimento web.
+                Sou um desenvolvedor de software com 3 anos de experiência no
+                mercado.
               </p>
               <p className='mt-8 text-3xl font-extralight'>
-                Tenho habilidades sólidas em HTML, CSS, Javascript, React, TailwindCSS e Styled Components.
+                Além do trabalho, meus hobbies incluem ler, viajar, passar tempo
+                com a família e fazer exercícios físicos.
               </p>
               <p className='mt-8 text-3xl font-extralight'>
-               Além do trabalho, meus hobbies incluem ler, viajar, passar tempo com a família e fazer exercícios físicos. 
-              </p>
-              <p className='mt-8 text-3xl font-extralight'>
-                Se você procura um desenvolvedor comprometido e apaixonado, estou pronto para enfrentar novos desafios e contribuir para o sucesso do seu projeto.
+                Se você procura um desenvolvedor de sites/sistemas web, estou
+                pronto para enfrentar novos desafios e contribuir para o sucesso
+                do seu projeto.
               </p>
               <div className='mt-12 [display:none] lg:block m-auto'>
                 <button
@@ -127,15 +128,9 @@ export default function Home() {
             </div>
             <div className='mt-12 lg:[display:none;] text-center relative'>
               <div className='self-center max-w-md m-auto rounded-md'>
-                {
-                  <Image
-                    alt=''
-                    src='/laptop.png'
-                    width={400}
-                    height={400}
-                    className='relative scale-150 rounded-full md:block left-6'
-                  />
-                }
+                <video width={400} autoPlay loop muted className='rounded-md'>
+                  <source type='video/mp4' src='/videos/coding.mp4' />
+                </video>
               </div>
               <button
                 onClick={() =>
@@ -149,16 +144,10 @@ export default function Home() {
                 ENTRAR EM CONTATO
               </button>
             </div>
-            <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative lg:bottom-10'>
-              {
-                <Image
-                  alt=''
-                  src='/laptop.png'
-                  width={400}
-                  height={400}
-                  className='relative scale-150 rounded-full md:block left-6'
-                />
-              }
+            <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative top-0'>
+              <video width={400} autoPlay loop muted className='rounded-md'>
+                <source type='video/mp4' src='/videos/coding.mp4' />
+              </video>
             </div>
           </div>
           <div className='self-center max-w-md m-auto mt-24 rounded-md'>
@@ -206,7 +195,9 @@ export default function Home() {
           </section>
         </FadeInWrapper>
       </div>
-      <p className='my-5 text-lg text-center'>Jones Fernandes &copy; 2019 - {new Date().getFullYear()}</p>
+      <p className='my-5 text-lg text-center'>
+        Jones Fernandes &copy; 2019 - {new Date().getFullYear()}
+      </p>
     </div>
   );
 }
