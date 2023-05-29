@@ -52,7 +52,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className='relative self-center max-w-md m-auto -bottom-[157px] xl:-bottom-[120px] sm:block sm:left-0 left-2'>
+            <div className='relative self-center max-w-md m-auto -bottom-[157px] xl:-bottom-[120px] sm:block sm:left-0 left-2 fadeIn'>
               <Image
                 alt=''
                 src='/jones-cut-perfect.png'
@@ -120,7 +120,7 @@ export default function Home() {
                       '_blank'
                     )
                   }
-                  className='p-2 font-bold text-white transition-all bg-[#5aa6f6] rounded-md text-xl md:hover:scale-110 px-8'
+                  className='p-2 mb-24 font-bold text-white transition-all bg-[#5aa6f6] rounded-md text-xl md:hover:scale-110 px-8'
                 >
                   ENTRAR EM CONTATO
                 </button>
@@ -174,22 +174,54 @@ export default function Home() {
             </h2>
             <section className='flex flex-col items-center justify-center w-full gap-8 mx-auto lg:flex-row'>
               <Link href='https://frgpinturasedecoracoes.com/'>
-                <Image
-                  width={700}
-                  height={700}
-                  alt=''
-                  src='/frg-pinturas.png'
-                  className='transition hover:scale-105'
-                />
+                <div className='self-center m-auto rounded-md hover:border-2 hover:border-yellow-400'>
+                  <video
+                    width={700}
+                    autoPlay
+                    loop
+                    muted
+                    className='hidden rounded-md sm:block'
+                  >
+                    <source type='video/mp4' src='/videos/frgpinturas.webm' />
+                  </video>
+                  <video
+                    width={320}
+                    autoPlay
+                    loop
+                    muted
+                    className='rounded-md sm:hidden'
+                  >
+                    <source
+                      type='video/mp4'
+                      src='/videos/frgpinturas-mobile.mp4'
+                    />
+                  </video>
+                </div>
               </Link>
               <Link href='https://keysijones-blog.vercel.app/'>
-                <Image
-                  width={700}
-                  height={700}
-                  alt=''
-                  src='/personal-blog.png'
-                  className='transition hover:scale-105'
-                />
+                <div className='self-center m-auto rounded-md hover:border-2 hover:border-yellow-400'>
+                  <video
+                    width={700}
+                    autoPlay
+                    loop
+                    muted
+                    className='hidden rounded-md sm:block'
+                  >
+                    <source type='video/mp4' src='/videos/blog.mp4' />
+                  </video>
+                  <video
+                    width={320}
+                    autoPlay
+                    loop
+                    muted
+                    className='rounded-md sm:hidden'
+                  >
+                    <source
+                      type='video/mp4'
+                      src='/videos/blog-mobile.mp4'
+                    />
+                  </video>
+                </div>
               </Link>
             </section>
           </section>
