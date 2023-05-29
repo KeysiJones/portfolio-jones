@@ -16,7 +16,7 @@ export default function Home() {
           className='flex flex-col px-8 lg:px-0 justify-center text-[#262d3e] bg-[#FDD935] lg:flex relative overflow-hidden'
         >
           <div className='flex flex-col lg:flex-row'>
-            <div className='max-w-4xl m-auto pt-14 lg:px-12'>
+            <div className='max-w-4xl pt-24 m-auto lg:px-12'>
               <div className='flex'>
                 <Image
                   src='/dev.svg'
@@ -52,7 +52,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className='relative self-center max-w-md m-auto -bottom-[157px] xl:-bottom-[120px] sm:block sm:left-0 left-2 fadeIn'>
+            <div className='relative self-center max-w-md m-auto -bottom-[157px] xl:-bottom-[140px] sm:block sm:left-0 left-2 fadeIn'>
               <Image
                 alt=''
                 src='/jones-cut-perfect.png'
