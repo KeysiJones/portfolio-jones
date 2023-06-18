@@ -46,9 +46,9 @@ export default function Home() {
                       '_blank'
                     )
                   }
-                  className='p-2 font-bold text-white transition-all bg-[#5aa6f6] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                  className='px-2 py-3 font-bold text-white transition-all bg-[#5aa6f6] rounded-2xl sm:px-8 text-xl sm:hover:scale-110'
                 >
-                  QUERO SABER MAIS
+                  Quero saber mais
                 </button>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function Home() {
                 }
                 className='p-2 font-bold text-white transition-all bg-[#5aa6f6] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
               >
-                QUERO SABER MAIS
+                Quero saber mais
               </button>
             </div>
           </div>
@@ -97,22 +97,16 @@ export default function Home() {
       >
         <FadeInWrapper>
           <div className='relative flex flex-col xl:flex-row'>
-            <div className='max-w-3xl px-4 m-auto lg:relative'>
+            <div className='max-w-2xl px-4 m-auto lg:relative'>
               <h2 className='text-5xl font-extrabold sm:text-6xl'>Sobre Mim</h2>
               <p className='mt-12 text-3xl font-extralight'>
-                Sou um desenvolvedor de software com 3 anos de experiência no
-                mercado.
+                Tenho 3 anos de experiência no mercado de desenvolvimento web.
               </p>
               <p className='mt-8 text-3xl font-extralight'>
                 Além do trabalho, meus hobbies incluem ler, viajar, passar tempo
                 com a família e fazer exercícios físicos.
               </p>
-              <p className='mt-8 text-3xl font-extralight'>
-                Se você procura um desenvolvedor de sites/sistemas web, estou
-                pronto para enfrentar novos desafios e contribuir para o sucesso
-                do seu projeto.
-              </p>
-              <div className='mt-12 [display:none] lg:block m-auto'>
+              {/* <div className='mt-12 [display:none] lg:block m-auto'>
                 <button
                   onClick={() =>
                     window.open(
@@ -124,11 +118,11 @@ export default function Home() {
                 >
                   ENTRAR EM CONTATO
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className='mt-12 lg:[display:none;] text-center relative'>
-              <div className='self-center max-w-md m-auto rounded-md'>
-                <video width={400} autoPlay loop muted className='rounded-md'>
+              <div className='self-center max-w-md m-auto rounded-xl'>
+                <video width={400} autoPlay loop muted className='rounded-xl'>
                   <source type='video/mp4' src='/videos/coding.mp4' />
                 </video>
               </div>
@@ -145,7 +139,7 @@ export default function Home() {
               </button>
             </div>
             <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative top-0'>
-              <video width={400} autoPlay loop muted className='rounded-md'>
+              <video width={400} autoPlay loop muted className='rounded-3xl'>
                 <source type='video/mp4' src='/videos/coding.mp4' />
               </video>
             </div>
@@ -175,52 +169,75 @@ export default function Home() {
             <section className='flex flex-col items-center justify-center w-full gap-8 mx-auto lg:flex-row'>
               <Link href='https://frgpinturasedecoracoes.com/'>
                 <div className='self-center m-auto rounded-md hover:border-2 hover:border-yellow-400'>
-                  <video
-                    width={700}
-                    autoPlay
-                    loop
-                    muted
-                    className='hidden rounded-md sm:block'
-                  >
-                    <source type='video/mp4' src='/videos/frgpinturas.webm' />
-                  </video>
-                  <video
-                    width={320}
-                    autoPlay
-                    loop
-                    muted
-                    className='rounded-md sm:hidden'
-                  >
-                    <source
-                      type='video/mp4'
-                      src='/videos/frgpinturas-mobile.mp4'
-                    />
-                  </video>
+                  <div className='relative hidden sm:block'>
+                    <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                      <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>CLICK TO SEE LIVE PREVIEW</p>
+                    </div>
+                    <h3 className='py-4 font-semibold text-center'>Frg Pinturas e Decoracoes</h3>
+                    <video
+                      width={700}
+                      autoPlay
+                      loop
+                      muted
+                      className='rounded-md'
+                    >
+                      <source type='video/mp4' src='/videos/frgpinturas.webm' />
+                    </video>
+                  </div>
+                  <div className='relative sm:hidden'>
+                    <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                      <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>CLICK TO SEE LIVE PREVIEW</p>
+                    </div>
+                    <h3 className='py-4 font-semibold text-center'>Frg Pinturas e Decoracoes</h3>
+                    <video
+                      width={320}
+                      autoPlay
+                      loop
+                      muted
+                      className='rounded-md'
+                    >
+                      <source
+                        type='video/mp4'
+                        src='/videos/frgpinturas-mobile.mp4'
+                      />
+                    </video>
+                  </div>
                 </div>
               </Link>
               <Link href='https://keysijones-blog.vercel.app/'>
                 <div className='self-center m-auto rounded-md hover:border-2 hover:border-yellow-400'>
-                  <video
-                    width={700}
-                    autoPlay
-                    loop
-                    muted
-                    className='hidden rounded-md sm:block'
-                  >
-                    <source type='video/mp4' src='/videos/blog.mp4' />
-                  </video>
-                  <video
-                    width={320}
-                    autoPlay
-                    loop
-                    muted
-                    className='rounded-md sm:hidden'
-                  >
-                    <source
-                      type='video/mp4'
-                      src='/videos/blog-mobile.mp4'
-                    />
-                  </video>
+                  <div className='relative hidden rounded-md sm:block'>
+                    <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                      <p className='relative text-black bg-yellow-400 font-bold top-[87%] py-4 text-xl'>CLICK TO SEE LIVE PREVIEW</p>
+                    </div>
+                    <h3 className='py-4 font-semibold text-center'>Blog Pessoal</h3>
+                    <video
+                      width={700}
+                      autoPlay
+                      loop
+                      muted
+                      className='relative z-0'
+                    >
+                      <source type='video/mp4' src='/videos/blog.mp4' />
+                    </video>
+                  </div>
+                  <div className='relative rounded-md sm:hidden'>
+                    <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                      <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>CLICK TO SEE LIVE PREVIEW</p>
+                    </div>
+                    <h3 className='py-4 font-semibold text-center'>Blog Pessoal</h3>
+                    <video
+                      width={320}
+                      autoPlay
+                      loop
+                      muted
+                    >
+                      <source
+                        type='video/mp4'
+                        src='/videos/blog-mobile.mp4'
+                      />
+                    </video>
+                  </div>
                 </div>
               </Link>
             </section>
