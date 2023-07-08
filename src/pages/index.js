@@ -52,7 +52,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className='relative self-center max-w-md m-auto -bottom-[157px] xl:-bottom-[140px] sm:block sm:left-0 left-2 fadeIn'>
+            <div className='relative self-center max-w-md m-auto -bottom-[160px] xl:-bottom-[150px] sm:block sm:left-0 left-2 fadeIn'>
               <Image
                 alt=''
                 src='/jones-cut-perfect.png'
