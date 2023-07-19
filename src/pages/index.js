@@ -10,58 +10,32 @@ export default function Home() {
     <div
       className={'text-black bg-white transition-all flex' + inter.className}
     >
-      <FadeInWrapper>
-        <div
-          id='hero-section'
-          className='flex flex-col px-8 lg:px-0 justify-center text-[#262d3e] bg-[#FDD935] lg:flex relative overflow-hidden'
-        >
-          <div className='flex flex-col lg:flex-row'>
-            <div className='max-w-4xl pt-24 m-auto lg:px-12'>
-              <div className='flex'>
-                <Image
-                  src='/dev.svg'
-                  width={80}
-                  height={80}
-                  alt='dev icon'
-                  className='mb-1'
-                />
-              </div>
-              <h2 className='text-5xl font-black fadeIn sm:text-6xl'>
-                Jones Fernandes
-              </h2>
-              <div className='my-12 max-w-xl sm:max-w-2xl text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
-                <p className='pt-2 text-gray-400 sm:[display:none;]'>
-                  README.md
-                </p>
-                <p className='p-6 text-left sm:p-0'>
-                  Oi, Eu sou o Jones, desenvolvedor web focado em criar software
-                  que gera valor para grandes empresas.
-                </p>
-              </div>
-              <div className='[display:none] lg:block m-auto'>
-                <button
-                  onClick={() =>
-                    window.open(
-                      'https://api.whatsapp.com/send/?phone=5551993667706',
-                      '_blank'
-                    )
-                  }
-                  className='px-2 py-3 font-bold text-white transition-all bg-[#5aa6f6] rounded-2xl sm:px-8 text-xl sm:hover:scale-110'
-                >
-                  Quero saber mais
-                </button>
-              </div>
-            </div>
-            <div className='relative self-center max-w-md m-auto -bottom-[160px] xl:-bottom-[150px] sm:block sm:left-0 left-2 fadeIn'>
+      <div
+        id='hero-section'
+        className='flex flex-col px-8 lg:px-0 justify-center text-[#262d3e] bg-[whitesmoke] lg:flex relative overflow-hidden'
+      >
+        <div className='flex flex-col lg:flex-row'>
+          <div className='max-w-4xl pt-24 lg:px-32'>
+            <div className='flex'>
               <Image
-                alt=''
-                src='/jones-cut-perfect.png'
-                width={600}
-                height={600}
-                className='lg:scale-125'
+                src='/dev.svg'
+                width={80}
+                height={80}
+                alt='dev icon'
+                className='mb-1'
               />
             </div>
-            <div className='mt-12 lg:[display:none;] text-center relative'>
+            <h2 className='text-5xl font-black fadeIn sm:text-6xl'>
+              Jones Fernandes
+            </h2>
+            <div className='my-12 max-w-xl sm:max-w-2xl text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
+              <p className='pt-2 text-gray-400 sm:[display:none;]'>README.md</p>
+              <p className='p-6 text-left sm:p-0'>
+                Oi, Eu sou o Jones, desenvolvedor web focado em criar software
+                que gera valor para grandes empresas.
+              </p>
+            </div>
+            <div className='[display:none] lg:block m-auto'>
               <button
                 onClick={() =>
                   window.open(
@@ -69,13 +43,36 @@ export default function Home() {
                     '_blank'
                   )
                 }
-                className='p-2 font-bold text-white transition-all bg-[#5aa6f6] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                className='px-2 py-3 font-bold text-white transition-all bg-[#5aa6f6] rounded-2xl sm:px-8 text-xl sm:hover:scale-110'
               >
                 Quero saber mais
               </button>
             </div>
           </div>
-          <div className='self-center max-w-md m-auto mt-24 rounded-md'>
+          {/* <div className='relative self-center max-w-md m-auto -bottom-[160px] xl:-bottom-[150px] sm:block sm:left-0 left-2 fadeIn'>
+              <Image
+                alt=''
+                src='/jones-cut-perfect.png'
+                width={600}
+                height={600}
+                className='lg:scale-125'
+              />
+            </div> */}
+          <div className='mt-12 lg:[display:none;] text-center relative'>
+            <button
+              onClick={() =>
+                window.open(
+                  'https://api.whatsapp.com/send/?phone=5551993667706',
+                  '_blank'
+                )
+              }
+              className='p-2 font-bold text-white transition-all bg-[#5aa6f6] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+            >
+              Quero saber mais
+            </button>
+          </div>
+        </div>
+        {/* <div className='self-center max-w-md m-auto rounded-md'>
             <Image
               alt=''
               src='/arrow-down.svg'
@@ -88,9 +85,9 @@ export default function Home() {
                   .scrollIntoView({ behavior: 'smooth' })
               }
             />
-          </div>
-        </div>
-      </FadeInWrapper>
+          </div> */}
+      </div>
+      <svg className='bg-slate-800' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5f5f5" fill-opacity="1" d="M0,64L120,80C240,96,480,128,720,128C960,128,1200,96,1320,80L1440,64L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
       <div
         id='sobre-mim'
         className='justify-center px-4 py-24 text-white lg:flex bg-slate-800 sm:flex-col'
@@ -160,89 +157,90 @@ export default function Home() {
           </div>
         </FadeInWrapper>
       </div>
-      <div id='projetos' className='lg:h-[90vh] bg-white'>
-        <FadeInWrapper>
-          <section className='flex flex-col justify-center w-full gap-8'>
-            <h2 className='mt-20 text-5xl font-extrabold text-center text-[#262d3e] sm:text-6xl'>
-              Projetos Realizados
-            </h2>
-            <section className='flex flex-col items-center justify-center w-full gap-8 mx-auto lg:flex-row'>
-              <Link href='https://frgpinturasedecoracoes.com/'>
-                <div className='self-center m-auto rounded-md hover:border-2 hover:border-yellow-400'>
-                  <div className='relative hidden sm:block'>
-                    <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
-                      <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>CLICK TO SEE LIVE PREVIEW</p>
-                    </div>
-                    <h3 className='py-4 font-semibold text-center'>Frg Pinturas e Decoracoes</h3>
-                    <video
-                      width={700}
-                      autoPlay
-                      loop
-                      muted
-                      className='rounded-md'
-                    >
-                      <source type='video/mp4' src='/videos/frgpinturas.webm' />
-                    </video>
+      <div id='projetos' className='bg-white'>
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
+          <path
+            fill='#1e293b'
+            fill-opacity='1'
+            d='M0,192L80,197.3C160,203,320,213,480,213.3C640,213,800,203,960,192C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z'
+          ></path>
+        </svg>
+        <section className='flex flex-col justify-center w-full gap-8 pb-20'>
+          <h2 className='mt-20 text-5xl font-extrabold text-center text-[#262d3e] sm:text-6xl'>
+            Projetos Realizados
+          </h2>
+          <section className='flex flex-col items-center justify-center w-full gap-8 mx-auto lg:flex-row'>
+            <Link href='https://frgpinturasedecoracoes.com/'>
+              <div className='self-center m-auto rounded-md hover:border-2 hover:border-yellow-400'>
+                <div className='relative hidden sm:block'>
+                  <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                    <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>
+                      CLICK TO SEE LIVE PREVIEW
+                    </p>
                   </div>
-                  <div className='relative sm:hidden'>
-                    <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
-                      <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>CLICK TO SEE LIVE PREVIEW</p>
-                    </div>
-                    <h3 className='py-4 font-semibold text-center'>Frg Pinturas e Decoracoes</h3>
-                    <video
-                      width={320}
-                      autoPlay
-                      loop
-                      muted
-                      className='rounded-md'
-                    >
-                      <source
-                        type='video/mp4'
-                        src='/videos/frgpinturas-mobile.mp4'
-                      />
-                    </video>
-                  </div>
+                  <h3 className='py-4 font-semibold text-center'>
+                    Frg Pinturas e Decoracoes
+                  </h3>
+                  <video width={700} autoPlay loop muted className='rounded-md'>
+                    <source type='video/mp4' src='/videos/frgpinturas.webm' />
+                  </video>
                 </div>
-              </Link>
-              <Link href='https://keysijones-blog.vercel.app/'>
-                <div className='self-center m-auto rounded-md hover:border-2 hover:border-yellow-400'>
-                  <div className='relative hidden rounded-md sm:block'>
-                    <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
-                      <p className='relative text-black bg-yellow-400 font-bold top-[87%] py-4 text-xl'>CLICK TO SEE LIVE PREVIEW</p>
-                    </div>
-                    <h3 className='py-4 font-semibold text-center'>Blog Pessoal</h3>
-                    <video
-                      width={700}
-                      autoPlay
-                      loop
-                      muted
-                      className='relative z-0'
-                    >
-                      <source type='video/mp4' src='/videos/blog.mp4' />
-                    </video>
+                <div className='relative sm:hidden'>
+                  <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                    <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>
+                      CLICK TO SEE LIVE PREVIEW
+                    </p>
                   </div>
-                  <div className='relative rounded-md sm:hidden'>
-                    <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
-                      <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>CLICK TO SEE LIVE PREVIEW</p>
-                    </div>
-                    <h3 className='py-4 font-semibold text-center'>Blog Pessoal</h3>
-                    <video
-                      width={320}
-                      autoPlay
-                      loop
-                      muted
-                    >
-                      <source
-                        type='video/mp4'
-                        src='/videos/blog-mobile.mp4'
-                      />
-                    </video>
-                  </div>
+                  <h3 className='py-4 font-semibold text-center'>
+                    Frg Pinturas e Decoracoes
+                  </h3>
+                  <video width={320} autoPlay loop muted className='rounded-md'>
+                    <source
+                      type='video/mp4'
+                      src='/videos/frgpinturas-mobile.mp4'
+                    />
+                  </video>
                 </div>
-              </Link>
-            </section>
+              </div>
+            </Link>
+            <Link href='https://keysijones-blog.vercel.app/'>
+              <div className='self-center m-auto rounded-md hover:border-2 hover:border-yellow-400'>
+                <div className='relative hidden rounded-md sm:block'>
+                  <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                    <p className='relative text-black bg-yellow-400 font-bold top-[87%] py-4 text-xl'>
+                      CLICK TO SEE LIVE PREVIEW
+                    </p>
+                  </div>
+                  <h3 className='py-4 font-semibold text-center'>
+                    Blog Pessoal
+                  </h3>
+                  <video
+                    width={700}
+                    autoPlay
+                    loop
+                    muted
+                    className='relative z-0'
+                  >
+                    <source type='video/mp4' src='/videos/blog.mp4' />
+                  </video>
+                </div>
+                <div className='relative rounded-md sm:hidden'>
+                  <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                    <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>
+                      CLICK TO SEE LIVE PREVIEW
+                    </p>
+                  </div>
+                  <h3 className='py-4 font-semibold text-center'>
+                    Blog Pessoal
+                  </h3>
+                  <video width={320} autoPlay loop muted>
+                    <source type='video/mp4' src='/videos/blog-mobile.mp4' />
+                  </video>
+                </div>
+              </div>
+            </Link>
           </section>
-        </FadeInWrapper>
+        </section>
       </div>
       <p className='my-5 text-lg text-center'>
         Jones Fernandes &copy; 2019 - {new Date().getFullYear()}
