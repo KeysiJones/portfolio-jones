@@ -15,8 +15,8 @@ export default function Home() {
         className='flex flex-col px-8 lg:px-0 justify-center text-[#262d3e] bg-[whitesmoke] lg:flex relative overflow-hidden'
       >
         <div className='flex flex-col lg:flex-row'>
-          <div className='max-w-4xl pt-24 lg:px-32'>
-            <div className='flex'>
+          <div className='max-w-4xl pt-24 m-auto sm:pt-40'>
+            {/* <div className='flex'>
               <Image
                 src='/dev.svg'
                 width={80}
@@ -24,7 +24,7 @@ export default function Home() {
                 alt='dev icon'
                 className='mb-1'
               />
-            </div>
+            </div> */}
             <h2 className='text-5xl font-black fadeIn sm:text-6xl'>
               Jones Fernandes
             </h2>
@@ -43,7 +43,7 @@ export default function Home() {
                     '_blank'
                   )
                 }
-                className='px-2 py-3 font-bold text-white transition-all bg-[#5aa6f6] rounded-2xl sm:px-8 text-xl sm:hover:scale-110'
+                className='px-2 py-2 text-slate-700 transition-all bg-[gold] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
               >
                 Quero saber mais
               </button>
@@ -66,7 +66,7 @@ export default function Home() {
                   '_blank'
                 )
               }
-              className='p-2 font-bold text-white transition-all bg-[#5aa6f6] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+            className='px-2 py-2 text-slate-700 transition-all bg-[gold] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
             >
               Quero saber mais
             </button>
@@ -90,7 +90,7 @@ export default function Home() {
       <svg className='bg-slate-800' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5f5f5" fill-opacity="1" d="M0,64L120,80C240,96,480,128,720,128C960,128,1200,96,1320,80L1440,64L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
       <div
         id='sobre-mim'
-        className='justify-center px-4 py-24 text-white lg:flex bg-slate-800 sm:flex-col'
+        className='justify-center px-4 text-white lg:flex bg-slate-800 sm:flex-col'
       >
         <FadeInWrapper>
           <div className='relative flex flex-col xl:flex-row'>
@@ -99,7 +99,7 @@ export default function Home() {
               <p className='mt-12 text-3xl font-extralight'>
                 Tenho 3 anos de experiência no mercado de desenvolvimento web.
               </p>
-              <p className='mt-8 text-3xl font-extralight'>
+              <p className='my-12 text-3xl font-extralight'>
                 Além do trabalho, meus hobbies incluem ler, viajar, passar tempo
                 com a família e fazer exercícios físicos.
               </p>
@@ -166,7 +166,7 @@ export default function Home() {
           ></path>
         </svg>
         <section className='flex flex-col justify-center w-full gap-8 pb-20'>
-          <h2 className='mt-20 text-5xl font-extrabold text-center text-[#262d3e] sm:text-6xl'>
+          <h2 className='text-5xl font-extrabold text-center text-[#262d3e] sm:text-6xl'>
             Projetos Realizados
           </h2>
           <section className='flex flex-col items-center justify-center w-full gap-8 mx-auto lg:flex-row'>
@@ -175,7 +175,7 @@ export default function Home() {
                 <div className='relative hidden sm:block'>
                   <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
                     <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>
-                      CLICK TO SEE LIVE PREVIEW
+                      VER DEMO
                     </p>
                   </div>
                   <h3 className='py-4 font-semibold text-center'>
@@ -188,7 +188,7 @@ export default function Home() {
                 <div className='relative sm:hidden'>
                   <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
                     <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>
-                      CLICK TO SEE LIVE PREVIEW
+                      VER DEMO
                     </p>
                   </div>
                   <h3 className='py-4 font-semibold text-center'>
@@ -208,7 +208,7 @@ export default function Home() {
                 <div className='relative hidden rounded-md sm:block'>
                   <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
                     <p className='relative text-black bg-yellow-400 font-bold top-[87%] py-4 text-xl'>
-                      CLICK TO SEE LIVE PREVIEW
+                     VER DEMO
                     </p>
                   </div>
                   <h3 className='py-4 font-semibold text-center'>
@@ -227,7 +227,7 @@ export default function Home() {
                 <div className='relative rounded-md sm:hidden'>
                   <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
                     <p className='relative text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>
-                      CLICK TO SEE LIVE PREVIEW
+                      VER DEMO
                     </p>
                   </div>
                   <h3 className='py-4 font-semibold text-center'>
