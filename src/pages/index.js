@@ -130,9 +130,9 @@ export default function Home() {
                     '_blank'
                   )
                 }
-                className='p-2 mt-24 font-bold text-gray-700 transition-all bg-[#5aa6f6] rounded-md sm:px-8 text-xl sm:hover:scale-110 px-8'
+                className='px-2 py-2 text-slate-700 transition-all bg-[gold] rounded-xl sm:px-4 text-xl sm:hover:scale-110 mt-16'
               >
-                ENTRAR EM CONTATO
+                Entrar em contato
               </button>
             </div>
             <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative top-0'>
