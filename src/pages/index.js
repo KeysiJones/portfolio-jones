@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Home() {
   return (
     <div
-      className={'text-black bg-white transition-all flex' + inter.className}
+      className={'text-black transition-all flex' + inter.className}
     >
       <div
         id='hero-section'
@@ -21,40 +21,37 @@ export default function Home() {
             </h2>
             <div className='my-12 max-w-xl sm:max-w-2xl text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
               <p className='pt-2 text-gray-400 sm:[display:none;]'>README.md</p>
-              <p className='p-6 text-left sm:p-0'>
-                Oi, Eu sou o Jones, desenvolvedor web focado em criar software
-                que gera valor para grandes empresas.
+              <p className='p-6 text-left sm:p-0 [line-height:43px;]'>
+                Hi, I&apos;m Jones, a React Developer with 3+ years of
+                experience in the web development market. I&apos;m passionate
+                about building beautiful and user-friendly applications.
               </p>
             </div>
             <div className='[display:none] lg:block m-auto'>
-              <button
-                onClick={() =>
-                  window.open(
-                    'https://api.whatsapp.com/send/?phone=5551993667706',
-                    '_blank'
-                  )
-                }
-                className='px-2 py-2 text-slate-700 uppercase font-semibold transition-all bg-[gold] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
+              <a
+                href='https://linkedin.com/in/keysijones'
+                className='px-2 py-2 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
               >
-                Quero saber mais
-              </button>
+                See LinkedIn Profile
+              </a>
             </div>
           </div>
           <div className='relative self-center max-w-md m-auto mt-20 sm:block sm:left-0 left-2 fadeIn'>
-            <Image alt='' src='/jones-profile.jpg' width={600} height={600} className='border-8 rounded-full border-slate-700'/>
+            <Image
+              alt=''
+              src='/jones-profile.jpg'
+              width={600}
+              height={600}
+              className='border-8 rounded-full border-slate-700'
+            />
           </div>
           <div className='mt-12 lg:[display:none;] text-center relative'>
-            <button
-              onClick={() =>
-                window.open(
-                  'https://api.whatsapp.com/send/?phone=5551993667706',
-                  '_blank'
-                )
-              }
-              className='px-2 py-2 text-slate-700 uppercase font-semibold transition-all bg-[gold] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
+            <a
+              href='https://linkedin.com/in/keysijones'
+              className='px-2 py-2 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
             >
-              Quero saber mais
-            </button>
+              See LinkedIn Profile
+            </a>
           </div>
         </div>
         {/* <div className='self-center max-w-md m-auto rounded-md'>
@@ -90,13 +87,12 @@ export default function Home() {
         <FadeInWrapper>
           <div className='relative flex flex-col xl:flex-row'>
             <div className='max-w-2xl px-4 m-auto lg:relative'>
-              <h2 className='text-5xl font-extrabold sm:text-6xl'>Sobre Mim</h2>
-              <p className='mt-12 text-3xl font-extralight'>
-                Tenho 3 anos de experiência no mercado de desenvolvimento web.
+              <h2 className='text-5xl font-extrabold sm:text-6xl'>About me</h2>
+              <p className='mt-12 text-3xl font-extralight [line-height:43px;]'>
+                I&apos;m A results-driven React developer with over 3 years of hands-on experience. From e-commerce platforms to product websites and social media platforms, I've successfully brought visions to life, creating seamless and engaging user experiences.
               </p>
               <p className='my-12 text-3xl font-extralight'>
-                Além do trabalho, meus hobbies incluem ler, viajar, passar tempo
-                com a família e fazer exercícios físicos.
+                Besides work, my hobbies include reading self-improvement books, hitting the gym, and spending time with my loved ones.
               </p>
               {/* <div className='mt-12 [display:none] lg:block m-auto'>
                 <button
@@ -118,17 +114,12 @@ export default function Home() {
                   <source type='video/mp4' src='/videos/coding.mp4' />
                 </video>
               </div>
-              <button
-                onClick={() =>
-                  window.open(
-                    'https://api.whatsapp.com/send/?phone=5551993667706',
-                    '_blank'
-                  )
-                }
-                className='px-2 py-2 text-slate-700 transition-all bg-[gold] rounded-xl sm:px-4 text-xl sm:hover:scale-110 mt-16'
-              >
-                Entrar em contato
-              </button>
+              <a
+              href='https://linkedin.com/in/keysijones'
+              className='px-2 py-2 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
+            >
+              See LinkedIn Profile
+            </a>
             </div>
             <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative top-0'>
               <video width={400} autoPlay loop muted className='rounded-3xl'>
@@ -142,7 +133,7 @@ export default function Home() {
               src='/arrow-down.svg'
               width={80}
               height={80}
-              className='mx-auto bg-[gold] rounded-full hover:cursor-pointer animate-bounce'
+              className='mx-auto bg-white rounded-full hover:cursor-pointer animate-bounce'
               onClick={() =>
                 document
                   .querySelector('#projetos')
@@ -162,14 +153,14 @@ export default function Home() {
         </svg>
         <section className='flex flex-col justify-center w-full gap-8 pb-20'>
           <h2 className='text-5xl font-extrabold text-center text-[#262d3e] sm:text-6xl'>
-            Projetos Realizados
+            My Projects
           </h2>
           <section className='flex flex-col items-center justify-center w-full gap-8 mx-auto lg:flex-row'>
             <Link href='https://frgpinturasedecoracoes.com/'>
-              <div className='self-center m-auto border-4 border-slate-200 min-h-[450px] rounded-xl hover:border-yellow-400'>
+              <div className='self-center m-auto border-4 border-slate-200 min-h-[450px] rounded-xl hover:border-[#0A66C2]'>
                 <div className='relative min-h-[450px] hidden sm:block'>
                   <div className='absolute min-h-[450px] -bottom-1 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
-                    <p className='relative rounded-b-sm text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>
+                    <p className='relative rounded-b-sm text-white bg-[#0A66C2] font-bold top-[86%] py-4 text-xl'>
                       VER DEMO
                     </p>
                   </div>
@@ -182,7 +173,7 @@ export default function Home() {
                 </div>
                 <div className='relative sm:hidden'>
                   <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
-                    <p className='relative rounded-b-sm text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>
+                    <p className='relative rounded-b-sm text-white bg-[#0A66C2] font-bold top-[86%] py-4 text-xl'>
                       VER DEMO
                     </p>
                   </div>
@@ -199,10 +190,10 @@ export default function Home() {
               </div>
             </Link>
             <Link href='https://keysijones-blog.vercel.app/'>
-              <div className='self-center m-auto border-4 rounded-xl min-h-[450px] border-slate-200 hover:border-yellow-400'>
+              <div className='self-center m-auto border-4 rounded-xl min-h-[450px] border-slate-200 hover:border-[#0A66C2]'>
                 <div className='relative hidden rounded-md sm:block min-h-[450px]'>
                   <div className='absolute min-h-[450px] bottom-0 z-10 w-full h-full text-center rounded-md opacity-0 hover:opacity-100 hover:block'>
-                    <p className='relative rounded-b-sm text-black bg-yellow-400 font-bold top-[87%] py-4 text-xl'>
+                    <p className='relative rounded-b-sm text-white bg-[#0A66C2] font-bold top-[87%] py-4 text-xl'>
                       VER DEMO
                     </p>
                   </div>
