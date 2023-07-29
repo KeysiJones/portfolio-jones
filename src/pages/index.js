@@ -89,7 +89,7 @@ export default function Home() {
             <div className='max-w-2xl px-4 m-auto lg:relative'>
               <h2 className='text-5xl font-extrabold sm:text-6xl'>About me</h2>
               <p className='mt-12 text-3xl font-extralight [line-height:43px;]'>
-                I&apos;m A results-driven React developer with over 3 years of hands-on experience. From e-commerce platforms to product websites and social media platforms, I've successfully brought visions to life, creating seamless and engaging user experiences.
+                I&apos;m A results-driven React developer with over 3 years of hands-on experience. From e-commerce platforms to product websites and social media platforms, I&apos;ve successfully brought visions to life, creating seamless and engaging user experiences.
               </p>
               <p className='my-12 text-3xl font-extralight'>
                 Besides work, my hobbies include reading self-improvement books, hitting the gym, and spending time with my loved ones.
