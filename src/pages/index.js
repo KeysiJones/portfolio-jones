@@ -21,7 +21,11 @@ export default function Home() {
             </h2>
             <div className='my-12 max-w-xl sm:max-w-2xl text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
               <p className='pt-2 text-gray-400 sm:[display:none;]'>README.md</p>
-              <p className='p-6 text-left sm:p-0 [line-height:43px;]'>
+              <p className='sm:[display:none] p-6 text-left sm:p-0 [line-height:43px;]'>
+                Hi, I&apos;m Jones, a React Developer with 3+ years of
+                experience in the web development market.
+              </p>
+              <p className='[display:none] sm:block p-6 text-left sm:p-0 [line-height:43px;]'>
                 Hi, I&apos;m Jones, a React Developer with 3+ years of
                 experience in the web development market. I&apos;m passionate
                 about building beautiful and user-friendly applications.
@@ -36,7 +40,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className='relative self-center max-w-md m-auto mt-20 sm:block sm:left-0 left-2 fadeIn'>
+          <div className='relative self-center max-w-md m-auto sm:mt-20 sm:block sm:left-0 left-2 fadeIn'>
             <Image
               alt=''
               src='/jones-profile.jpg'
@@ -54,20 +58,6 @@ export default function Home() {
             </a>
           </div>
         </div>
-        {/* <div className='self-center max-w-md m-auto rounded-md'>
-            <Image
-              alt=''
-              src='/arrow-down.svg'
-              width={80}
-              height={80}
-              className='mx-auto bg-white rounded-full hover:cursor-pointer animate-bounce'
-              onClick={() =>
-                document
-                  .querySelector('#sobre-mim')
-                  .scrollIntoView({ behavior: 'smooth' })
-              }
-            />
-          </div> */}
       </div>
       <svg
         className='bg-slate-800'

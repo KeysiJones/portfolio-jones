@@ -2,10 +2,10 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="pt-br">
+    <Html lang="en'us">
       <Head />
       <meta name="theme-color" content="#262d3e" />
-      <title>Jones Fernandes - Desenvolvedor De Sites</title>
+      <title>Jones Fernandes - React Developer</title>
       <body style={{backgroundColor: "white"}}>
         <Main />
         <NextScript />
