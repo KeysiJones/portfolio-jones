@@ -32,7 +32,7 @@ export default function Home() {
             <div className='[display:none] mb-8 sm:block m-auto'>
               <a
                 href='https://linkedin.com/in/keysijones'
-                className='py-3 px-6 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
+                className='hover:bg-blue-400 py-3 px-6 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
               >
                 See LinkedIn Profile
               </a>
@@ -50,7 +50,7 @@ export default function Home() {
           <div className='my-12 sm:[display:none;] text-center relative'>
             <a
               href='https://linkedin.com/in/keysijones'
-              className='px-6 py-3 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
+              className='hover:bg-blue-400 px-6 py-3 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
             >
               See LinkedIn Profile
             </a>
@@ -97,7 +97,7 @@ export default function Home() {
             </div>
             <a
               href='https://linkedin.com/in/keysijones'
-              className='sm:[display:none;] block mx-auto my-24 px-6 py-3 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
+              className='hover:bg-blue-400 sm:[display:none;] block mx-auto my-24 px-6 py-3 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
             >
               See LinkedIn Profile
             </a>
