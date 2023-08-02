@@ -10,14 +10,14 @@ export default function Home() {
     <div className={'text-black transition-all flex' + inter.className}>
       <div
         id='hero-section'
-        className='flex flex-col px-8 xl:px-0 justify-center text-[#262d3e] bg-[whitesmoke] lg:flex relative overflow-hidden'
+        className='flex flex-col px-8 sm:pt-12 xl:px-0 justify-center text-[#262d3e] bg-[whitesmoke] lg:flex relative overflow-hidden'
       >
         <div className='flex flex-col lg:flex-row'>
           <div className='max-w-4xl pt-12 m-auto'>
             <h2 className='text-5xl font-black text-center sm:text-left fadeIn sm:text-6xl'>
               Jones Fernandes
             </h2>
-            <div className='my-12 max-w-xl sm:max-w-2xl text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
+            <div className='my-12 max-w-xl sm:max-w-2xl text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center font-light'>
               <p className='pt-2 text-gray-400 sm:[display:none;]'>README.md</p>
               <p className='sm:[display:none] p-6 text-left xl:p-0 [line-height:43px;]'>
                 Hi, I&apos;m Jones, a React Developer with 3+ years of
@@ -44,7 +44,7 @@ export default function Home() {
               src='/jones-profile.jpg'
               width={600}
               height={600}
-              className='border-8 rounded-full sm:mt-8 border-slate-700'
+              className='rounded-full sm:mt-8'
             />
           </div>
           <div className='my-12 sm:[display:none;] text-center relative'>
