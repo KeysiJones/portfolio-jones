@@ -147,10 +147,10 @@ export default function Home() {
           </h2>
           <section className='flex flex-col items-center justify-center w-full gap-8 mx-auto lg:flex-row'>
             <Link href='https://frgpinturasedecoracoes.com/'>
-              <div className='self-center m-auto border-4 border-slate-200 min-h-[450px] rounded-xl hover:border-[#0A66C2]'>
-                <div className='relative min-h-[450px] hidden sm:block'>
-                  <div className='absolute min-h-[450px] -bottom-1 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
-                    <p className='relative rounded-b-sm text-white bg-[#0A66C2] font-bold top-[86%] py-4 text-xl'>
+              <div className='self-center m-auto border-4 border-slate-200 max-w-xl sm:min-h-[380px] rounded-xl hover:border-[#0A66C2]'>
+                <div className='relative sm:min-h-[380px] hidden sm:block'>
+                  <div className='absolute sm:min-h-[380px] -bottom-1 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                    <p className='relative rounded-b-md text-white bg-[#0A66C2] font-bold top-[84%] py-4 text-xl'>
                       VER DEMO
                     </p>
                   </div>
@@ -161,9 +161,9 @@ export default function Home() {
                     <source type='video/mp4' src='/videos/frgpinturas.webm' />
                   </video>
                 </div>
-                <div className='relative sm:hidden'>
-                  <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
-                    <p className='relative rounded-b-sm text-white bg-[#0A66C2] font-bold top-[86%] py-4 text-xl'>
+                <div className='sm:min-h-[380px] relative sm:hidden'>
+                  <div className='sm:min-h-[380px] absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                    <p className='relative rounded-b-sm text-white bg-[#0A66C2] font-bold top-[92%] sm:top-[84%] py-4 text-xl'>
                       VER DEMO
                     </p>
                   </div>
@@ -180,10 +180,10 @@ export default function Home() {
               </div>
             </Link>
             <Link href='https://keysijones-blog.vercel.app/'>
-              <div className='self-center m-auto border-4 rounded-xl min-h-[450px] border-slate-200 hover:border-[#0A66C2]'>
-                <div className='relative hidden rounded-md sm:block min-h-[450px]'>
-                  <div className='absolute min-h-[450px] bottom-0 z-10 w-full h-full text-center rounded-md opacity-0 hover:opacity-100 hover:block'>
-                    <p className='relative rounded-b-sm text-white bg-[#0A66C2] font-bold top-[87%] py-4 text-xl'>
+              <div className='sm:min-h-[380px] max-w-xl self-center m-auto border-4 rounded-xl border-slate-200 hover:border-[#0A66C2]'>
+                <div className='sm:min-h-[380px] relative hidden rounded-md sm:block'>
+                  <div className='sm:min-h-[380px] absolute bottom-0 z-10 w-full h-full text-center rounded-md opacity-0 hover:opacity-100 hover:block'>
+                    <p className='relative rounded-b-md text-white bg-[#0A66C2] font-bold top-[85%] py-4 text-xl'>
                       VER DEMO
                     </p>
                   </div>
@@ -200,9 +200,9 @@ export default function Home() {
                     <source type='video/mp4' src='/videos/blog.mp4' />
                   </video>
                 </div>
-                <div className='relative rounded-md sm:hidden'>
-                  <div className='absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
-                    <p className='relative rounded-b-sm text-black bg-yellow-400 font-bold top-[86%] py-4 text-xl'>
+                <div className='sm:min-h-[380px] relative rounded-md sm:hidden'>
+                  <div className='sm:min-h-[380px] absolute bottom-0 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
+                    <p className='relative rounded-b-sm text-white bg-[#0A66C2] font-bold top-[92%] sm:top-[84%] py-4 text-xl'>
                       VER DEMO
                     </p>
                   </div>
@@ -219,7 +219,7 @@ export default function Home() {
         </section>
       </div>
       <p className='my-5 text-lg text-center'>
-        Jones Fernandes &copy; 2019 - {new Date().getFullYear()}
+        Made with ♥ By <a className='underline' href='https://www.linkedin.com/in/keysijones/'>Jones Fernandes</a><br/>
       </p>
     </div>
   );
