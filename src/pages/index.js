@@ -7,52 +7,50 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <div
-      className={'text-black transition-all flex' + inter.className}
-    >
+    <div className={'text-black transition-all flex' + inter.className}>
       <div
         id='hero-section'
-        className='flex flex-col px-8 lg:px-0 justify-center text-[#262d3e] bg-[whitesmoke] lg:flex relative overflow-hidden'
+        className='flex flex-col px-8 xl:px-0 justify-center text-[#262d3e] bg-[whitesmoke] lg:flex relative overflow-hidden'
       >
         <div className='flex flex-col lg:flex-row'>
-          <div className='max-w-4xl px-10 pt-12 m-auto'>
-            <h2 className='text-5xl font-black fadeIn sm:text-6xl'>
+          <div className='max-w-4xl pt-12 m-auto'>
+            <h2 className='text-5xl font-black text-center sm:text-left fadeIn sm:text-6xl'>
               Jones Fernandes
             </h2>
             <div className='my-12 max-w-xl sm:max-w-2xl text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center'>
               <p className='pt-2 text-gray-400 sm:[display:none;]'>README.md</p>
-              <p className='sm:[display:none] p-6 text-left sm:p-0 [line-height:43px;]'>
+              <p className='sm:[display:none] p-6 text-left xl:p-0 [line-height:43px;]'>
                 Hi, I&apos;m Jones, a React Developer with 3+ years of
-                experience in the web development market.
+                experience.
               </p>
-              <p className='[display:none] sm:block p-6 text-left sm:p-0 [line-height:43px;]'>
+              <p className='[display:none] sm:block py-6 text-left xl:p-0 [line-height:43px;]'>
                 Hi, I&apos;m Jones, a React Developer with 3+ years of
                 experience in the web development market. I&apos;m passionate
                 about building beautiful and user-friendly applications.
               </p>
             </div>
-            <div className='[display:none] lg:block m-auto'>
+            <div className='[display:none] mb-8 lg:block m-auto'>
               <a
                 href='https://linkedin.com/in/keysijones'
-                className='px-2 py-2 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
+                className='py-2 px-6 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-xl text-xl sm:hover:scale-110'
               >
                 See LinkedIn Profile
               </a>
             </div>
           </div>
-          <div className='relative self-center max-w-md m-auto sm:mt-20 sm:block sm:left-0 left-2 fadeIn'>
+          <div className='relative self-center max-w-md mx-auto sm:block sm:left-0 left-2 fadeIn'>
             <Image
               alt=''
               src='/jones-profile.jpg'
               width={600}
               height={600}
-              className='border-8 rounded-full border-slate-700'
+              className='border-8 rounded-full sm:mt-8 border-slate-700'
             />
           </div>
-          <div className='mt-12 lg:[display:none;] text-center relative'>
+          <div className='my-12 sm:[display:none;] text-center relative'>
             <a
               href='https://linkedin.com/in/keysijones'
-              className='px-2 py-2 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
+              className='px-6 py-2 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-xl text-xl sm:hover:scale-110'
             >
               See LinkedIn Profile
             </a>
@@ -79,45 +77,37 @@ export default function Home() {
             <div className='max-w-2xl px-4 m-auto lg:relative'>
               <h2 className='text-5xl font-extrabold sm:text-6xl'>About me</h2>
               <p className='mt-12 text-3xl font-extralight [line-height:43px;]'>
-                I&apos;m A results-driven React developer with over 3 years of hands-on experience. From e-commerce platforms to product websites and social media platforms, I&apos;ve successfully brought visions to life, creating seamless and engaging user experiences.
+                I&apos;m A results-driven React developer with over 3 years of
+                hands-on experience. From e-commerce platforms to product
+                websites and social media platforms, I&apos;ve successfully
+                brought visions to life, creating seamless and engaging user
+                experiences.
               </p>
               <p className='my-12 text-3xl font-extralight'>
-                Besides work, my hobbies include reading self-improvement books, hitting the gym, and spending time with my loved ones.
+                Besides work, my hobbies include reading self-improvement books,
+                hitting the gym, and spending time with my loved ones.
               </p>
-              {/* <div className='mt-12 [display:none] lg:block m-auto'>
-                <button
-                  onClick={() =>
-                    window.open(
-                      'https://api.whatsapp.com/send/?phone=5551993667706',
-                      '_blank'
-                    )
-                  }
-                  className='p-2 mb-24 font-bold text-white transition-all bg-[#5aa6f6] rounded-md text-xl md:hover:scale-110 px-8'
-                >
-                  ENTRAR EM CONTATO
-                </button>
-              </div> */}
             </div>
-            <div className='mt-12 lg:[display:none;] text-center relative'>
+            <div className='mt-12 sm:[display:none;] text-center relative'>
               <div className='self-center max-w-md m-auto rounded-xl'>
                 <video width={400} autoPlay loop muted className='rounded-xl'>
                   <source type='video/mp4' src='/videos/coding.mp4' />
                 </video>
               </div>
-              <a
+            </div>
+            <a
               href='https://linkedin.com/in/keysijones'
-              className='px-2 py-2 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-xl sm:px-4 text-xl sm:hover:scale-110'
+              className='sm:[display:none;] block mx-auto my-24 px-6 py-2 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-xl text-xl sm:hover:scale-110'
             >
               See LinkedIn Profile
             </a>
-            </div>
             <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative top-0'>
               <video width={400} autoPlay loop muted className='rounded-3xl'>
                 <source type='video/mp4' src='/videos/coding.mp4' />
               </video>
             </div>
           </div>
-          <div className='self-center max-w-md m-auto mt-24 rounded-md'>
+          <div className='self-center max-w-md m-auto rounded-md'>
             <Image
               alt=''
               src='/arrow-down.svg'
@@ -219,7 +209,11 @@ export default function Home() {
         </section>
       </div>
       <p className='my-5 text-lg text-center'>
-        Made with ♥ By <a className='underline' href='https://www.linkedin.com/in/keysijones/'>Jones Fernandes</a><br/>
+        Made with ♥ By{' '}
+        <a className='underline' href='https://www.linkedin.com/in/keysijones/'>
+          Jones Fernandes
+        </a>
+        <br />
       </p>
     </div>
   );
