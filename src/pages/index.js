@@ -137,7 +137,7 @@ export default function Home() {
           </h2>
           <section className='flex flex-col items-center justify-center w-full gap-8 mx-auto lg:flex-row'>
             <Link href='https://frgpinturasedecoracoes.com/'>
-              <div className='self-center m-auto border-4 border-slate-200 max-w-xl sm:min-h-[380px] rounded-xl hover:border-[#0A66C2]'>
+              <div className='self-center m-auto border-4 border-slate-200 max-w-xl sm:min-h-[380px] rounded-xl hover:border-[#0A66C2] transition-all ease-linear duration-200'>
                 <div className='relative sm:min-h-[380px] hidden sm:block'>
                   <div className='absolute sm:min-h-[380px] -bottom-1 z-10 w-full h-full text-center rounded-sm opacity-0 hover:opacity-100 hover:block'>
                     <p className='relative rounded-b-md text-white bg-[#0A66C2] font-bold top-[84%] py-4 text-xl'>
@@ -170,7 +170,7 @@ export default function Home() {
               </div>
             </Link>
             <Link href='https://keysijones-blog.vercel.app/'>
-              <div className='sm:min-h-[380px] max-w-xl self-center m-auto border-4 rounded-xl border-slate-200 hover:border-[#0A66C2]'>
+              <div className='sm:min-h-[380px] max-w-xl self-center m-auto border-4 rounded-xl border-slate-200 hover:border-[#0A66C2] transition-all ease-linear duration-200'>
                 <div className='sm:min-h-[380px] relative hidden rounded-md sm:block'>
                   <div className='sm:min-h-[380px] absolute bottom-0 z-10 w-full h-full text-center rounded-md opacity-0 hover:opacity-100 hover:block'>
                     <p className='relative rounded-b-md text-white bg-[#0A66C2] font-bold top-[85%] py-4 text-xl'>
