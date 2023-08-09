@@ -4,6 +4,7 @@ import { FadeInWrapper } from '@/components/FadeInWrapper';
 import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaSquareInstagram, FaWhatsapp } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -57,17 +58,30 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <svg
-        className='bg-slate-800'
-        xmlns='http://www.w3.org/2000/svg'
-        viewBox='0 0 1440 320'
-      >
-        <path
-          fill='#f5f5f5'
-          fill-opacity='1'
-          d='M0,64L120,80C240,96,480,128,720,128C960,128,1200,96,1320,80L1440,64L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z'
-        ></path>
-      </svg>
+      <div className='relative flex justify-center'>
+        <svg
+          className='w-full bg-slate-800'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 1440 320'
+        >
+          <path
+            fill='#f5f5f5'
+            fill-opacity='1'
+            d='M0,64L120,80C240,96,480,128,720,128C960,128,1200,96,1320,80L1440,64L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z'
+          ></path>
+        </svg>
+        <div className='absolute flex justify-center w-60 -bottom-12 sm:bottom-[20%] 2xl:bottom-[30%] gap-x-4'>
+          <a href='https://www.linkedin.com/in/keysijones/' target='_blank' rel="noreferrer">
+           <FaLinkedin size={60} fill='white'/>
+          </a>
+          <a href='https://github.com/KeysiJones/' target='_blank' rel="noreferrer">
+            <FaGithub size={60} fill='white'/>
+          </a>
+          <a href='https://wa.me/5551993667706' target='_blank' rel="noreferrer">
+            <FaWhatsapp size={60} fill='white'/>
+          </a>
+        </div>
+      </div>
       <div
         id='sobre-mim'
         className='justify-center px-4 text-white lg:flex bg-slate-800 sm:flex-col'
@@ -75,7 +89,7 @@ export default function Home() {
         <FadeInWrapper>
           <div className='relative flex flex-col xl:flex-row'>
             <div className='max-w-2xl px-4 m-auto lg:relative'>
-              <h2 className='text-5xl font-extrabold sm:text-6xl'>About me</h2>
+              <h2 className='pt-20 text-5xl font-extrabold sm:pt-0 sm:text-6xl'>About me</h2>
               <p className='mt-12 text-3xl font-extralight [line-height:43px;]'>
                 I&apos;m A results-driven React developer with over 3 years of
                 hands-on experience. From e-commerce platforms to product
