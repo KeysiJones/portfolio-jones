@@ -9,7 +9,7 @@ export default function Home() {
   const { t, lang } = useTranslation('common');
 
   return (
-      <div className='flex text-black transition-all'>
+      <div className='flex flex-col text-black transition-all'>
         <div
           id='hero-section'
           className='flex flex-col px-4 pt-12 xl:px-0 justify-center text-[#262d3e] bg-white lg:flex relative overflow-hidden'
