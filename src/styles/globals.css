@@ -99,39 +99,6 @@ html {
   --card-border-rgb: 131, 134, 135;
 }
 
-/*@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}*/
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -149,29 +116,10 @@ div#ReactGridGallery > div {
   justify-content: center;
 }
 
-/*body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}*/
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
-/*@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}*/
-
-
-// CAROUSEL STYLES
 
 .carousel .control-arrow,.carousel.carousel-slider .control-arrow {
   -webkit-transition: all .25s ease-in;
@@ -487,9 +435,6 @@ a {
   width: 100%;
 }
 
-
-// GOOGLE MAPS CSS
-
 .map-h2 {
   text-transform: uppercase;
   font-size: 1rem;
@@ -587,9 +532,6 @@ p.carousel-status {
   text-shadow: 0 0 black !important;
   right: 5px !important;
 }
-
-
-/* DROPDOWN MENU STYLES*/
 
 * {
   margin: 0;
@@ -713,8 +655,6 @@ button span {
   top: -7px;
 }
 
-/* content */
-
 .content {
   max-width: 1200px;
   margin: 0 auto;
@@ -733,8 +673,6 @@ button span {
 li.menu-items:hover ul.dropdown {
   display: block;
 }
-
-//Instagram Embeded CSS
 
 @media all and (min-width: 1024px) {
   div.rsme-embed {
@@ -796,67 +734,34 @@ li.menu-items:hover ul.dropdown {
   }
 }
 
-/* Whatsapp floating button */
-  div.floating {
-    width: 4rem;
-    height: 4rem;
-  }
+div.floating {
+  width: 4rem;
+  height: 4rem;
+}
 
-  li.dot {
-    background-color: black !important;
-  }
+li.dot {
+  background-color: black !important;
+}
 
-  .zoomIn {
-    animation: zoomIn .6s linear
-  }
+.zoomIn {
+  animation: zoomIn .6s linear
+}
 
-  .loading {
-    transform: translateY(-100%);
-    width: 400px;
-    height: 400px;
-    cursor: progress;
-    border-radius: 50%;
-    background:
-      linear-gradient(0.25turn, transparent, #fff, transparent),
-      linear-gradient(#eee, #eee);
-    background-repeat: no-repeat;
-    background-size: 400px 400px;
-    background-position: -315px 0, 0 0, 0px 190px, 50px 195px; 
-    animation: loading 1.5s infinite;
-  }
+.loading {
+  transform: translateY(-100%);
+  width: 400px;
+  height: 400px;
+  cursor: progress;
+  border-radius: 50%;
+  background:
+    linear-gradient(0.25turn, transparent, #fff, transparent),
+    linear-gradient(#eee, #eee);
+  background-repeat: no-repeat;
+  background-size: 400px 400px;
+  background-position: -315px 0, 0 0, 0px 190px, 50px 195px; 
+  animation: loading 1.5s infinite;
+}
 
-  .fadeIn {
-    animation: fadeIn .5s ease-out;
-  }
-
-  /*div.parcerias {
-    width: 100vw;
-    height: 12rem;
-  }
-
-  div.parcerias img {
-    width: 20px !important;
-    height: 20px !important;
-  }*/
-
-  div.glider-track {
-    margin: 0 4rem;
-  }
-
-  .fade-in-section {
-    opacity: 0;
-    transform: translateX(-5vw);
-    visibility: hidden;
-    transition: opacity 1s ease-out, transform .8s ease-out;
-    will-change: auto;
-  }
-
-  .fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
-  }
-
-  /*This is a great color for a dark mode #16222A*/
-
-  /*linear-gradient(177deg, #fcf200 0%, #ff3b00 48%, #f7df1e 100%)*/
+.fadeIn {
+  animation: fadeIn .5s ease-out;
+}

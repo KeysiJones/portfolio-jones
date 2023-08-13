@@ -1,10 +1,7 @@
 import Image from 'next/image';
-import { Inter } from '@next/font/google';
 import { FadeInWrapper } from '@/components/FadeInWrapper';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa6';
-import { Suspense } from 'react';
-const inter = Inter({ subsets: ['latin'] });
 import useTranslation from 'next-translate/useTranslation';
 import setLanguage from 'next-translate/setLanguage'
 
@@ -12,11 +9,10 @@ export default function Home() {
   const { t, lang } = useTranslation('common');
 
   return (
-    <Suspense fallback={() => <span>loading...</span>}>
-      <div className={'text-black transition-all flex' + inter.className}>
+      <div className='flex text-black transition-all'>
         <div
           id='hero-section'
-          className='flex flex-col px-4 pt-12 xl:px-0 justify-center text-[#262d3e] bg-[whitesmoke] lg:flex relative overflow-hidden'
+          className='flex flex-col px-4 pt-12 xl:px-0 justify-center text-[#262d3e] bg-white lg:flex relative overflow-hidden'
         >
           <div className='flex flex-col lg:flex-row'>
             <div className='max-w-4xl m-auto'>
@@ -32,7 +28,7 @@ export default function Home() {
               <h2 className='mt-20 text-5xl font-black text-center sm:text-left fadeIn sm:text-6xl'>
                 Jones Fernandes
               </h2>
-              <div className='sm:[display:none] relative self-center max-w-md mx-auto sm:left-0 left-2 mt-12 fadeIn'>
+              <div className='relative self-center max-w-md mx-auto mt-12 sm:hidden sm:left-0 left-2 fadeIn'>
                 <Image
                   alt=''
                   src='/jones-profile.jpg'
@@ -42,17 +38,17 @@ export default function Home() {
                 />
               </div>
               <div className='my-12 max-w-xl sm:max-w-2xl text-2xl sm:text-3xl bg-[#262d3e] sm:bg-inherit rounded-md text-white sm:text-[#262d3e] text-center font-light'>
-                <p className='pt-2 text-gray-400 sm:[display:none;]'>
+                <p className='pt-2 text-gray-400 sm:hidden'>
                   README.md
                 </p>
-                <p className='sm:[display:none] p-6 text-left xl:p-0 [line-height:43px;]'>
+                <p className='sm:hidden p-6 text-left xl:p-0 line-[43px]'>
                   {t('mobileGreeting')}
                 </p>
-                <p className='[display:none] sm:block py-6 text-left xl:p-0 [line-height:43px;]'>
+                <p className='hidden sm:block py-6 text-left xl:p-0 line-[43px]'>
                   {t('greeting')}
                 </p>
               </div>
-              <div className='[display:none] mb-8 sm:block m-auto'>
+              <div className='hidden m-auto mb-8 sm:block'>
                 <a
                   href='https://linkedin.com/in/keysijones'
                   className='hover:bg-blue-400 py-3 px-6 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
@@ -61,7 +57,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className='[display:none] relative self-center max-w-md mx-auto sm:block sm:left-0 left-2 fadeIn'>
+            <div className='relative self-center hidden max-w-md mx-auto sm:block sm:left-0 left-2 fadeIn'>
               <Image
                 alt=''
                 src='/jones-profile.jpg'
@@ -70,7 +66,7 @@ export default function Home() {
                 className='rounded-full sm:mt-8'
               />
             </div>
-            <div className='my-12 sm:[display:none;] text-center relative'>
+            <div className='relative my-12 text-center sm:hidden'>
               <a
                 href='https://linkedin.com/in/keysijones'
                 className='hover:bg-blue-400 px-6 py-3 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
@@ -126,14 +122,14 @@ export default function Home() {
                 <h2 className='pt-20 text-4xl font-bold sm:pt-0 sm:text-6xl'>
                   {t('aboutMe')}
                 </h2>
-                <p className='mt-12 text-2xl sm:text-3xl font-extralight sm:![line-height:43px;]'>
+                <p className='mt-12 text-2xl sm:text-3xl font-extralight sm:line-[43px]'>
                   {t('aboutMeDescription')}
                 </p>
-                <p className='my-12 text-2xl sm:text-3xl font-extralight sm:![line-height:43px;]'>
+                <p className='my-12 text-2xl sm:text-3xl font-extralight sm:line-[43px]'>
                   {t('hobbiesDescription')}
                 </p>
               </div>
-              <div className='mt-12 sm:[display:none;] text-center relative'>
+              <div className='relative mt-12 text-center sm:hidden'>
                 <div className='self-center max-w-md m-auto rounded-xl'>
                   <video width={400} autoPlay loop muted className='rounded-xl'>
                     <source type='video/mp4' src='/videos/coding.mp4' />
@@ -142,11 +138,11 @@ export default function Home() {
               </div>
               <a
                 href='https://linkedin.com/in/keysijones'
-                className='hover:bg-blue-400 sm:[display:none;] block mx-auto my-24 px-6 py-3 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
+                className='hover:bg-blue-400 sm:hidden block mx-auto my-24 px-6 py-3 text-white uppercase font-semibold transition-all bg-[#0A66C2] rounded-md text-xl sm:hover:scale-110'
               >
                 {t('linkedInProfileCTA')}
               </a>
-              <div className='[display:none;] lg:block self-center max-w-md m-auto rounded-md lg:relative top-0'>
+              <div className='top-0 self-center hidden max-w-md m-auto rounded-md lg:block lg:relative'>
                 <video width={400} autoPlay loop muted className='rounded-3xl'>
                   <source type='video/mp4' src='/videos/coding.mp4' />
                 </video>
@@ -284,6 +280,5 @@ export default function Home() {
           <br />
         </p>
       </div>
-    </Suspense>
   );
 }
