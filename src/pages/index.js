@@ -12,7 +12,7 @@ export default function Home() {
       <div className='flex flex-col text-black transition-all'>
         <div
           id='hero-section'
-          className='flex flex-col px-4 pt-12 xl:px-0 justify-center text-[#262d3e] bg-white lg:flex relative overflow-hidden'
+          className='flex flex-col px-4 pt-12 xl:px-0 justify-center text-[#262d3e] bg-[whitesmoke] lg:flex relative overflow-hidden'
         >
           <div className='flex flex-col lg:flex-row'>
             <div className='max-w-4xl m-auto'>
