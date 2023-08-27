@@ -31,7 +31,7 @@ export default function Home() {
               <div className='relative self-center max-w-md mx-auto mt-12 sm:hidden sm:left-0 left-2 fadeIn'>
                 <Image
                   alt=''
-                  src='/jones-profile.jpg'
+                  src='/jones-profile.png'
                   width={600}
                   height={600}
                   className='rounded-full sm:mt-8'
@@ -60,7 +60,7 @@ export default function Home() {
             <div className='relative self-center hidden max-w-md mx-auto sm:block sm:left-0 left-2 fadeIn'>
               <Image
                 alt=''
-                src='/jones-profile.jpg'
+                src='/jones-profile.png'
                 width={600}
                 height={600}
                 className='rounded-full sm:mt-8'
