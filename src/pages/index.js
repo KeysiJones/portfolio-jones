@@ -103,13 +103,6 @@ export default function Home() {
             >
               <FaGithub size={60} fill='white' />
             </a>
-            <a
-              href='https://wa.me/5551993667706'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <FaWhatsapp size={60} fill='white' />
-            </a>
           </div>
         </div>
         <div
